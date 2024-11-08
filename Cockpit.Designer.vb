@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class TimeBusForm
+Partial Class CockpitForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,13 +24,13 @@ Partial Class TimeBusForm
     Private Sub InitializeComponent()
         SuspendLayout()
         ' 
-        ' TimeBusForm
+        ' CockpitForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(584, 361)
-        Name = "TimeBusForm"
-        Text = "TimeBus.B2"
+        ClientSize = New Size(800, 450)
+        Name = "CockpitForm"
+        Text = "Cockpit"
         ResumeLayout(False)
     End Sub
 End Class
