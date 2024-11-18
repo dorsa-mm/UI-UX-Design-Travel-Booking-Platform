@@ -22,10 +22,72 @@ Partial Class MainInterface
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        Label1 = New Label()
+        btnCreateTour = New Button()
+        btnModifyTour = New Button()
+        btnCopyTour = New Button()
+        SuspendLayout()
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Showcard Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(12, 7)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(259, 23)
+        Label1.TabIndex = 0
+        Label1.Text = "Welcome to Timebus Inc."
+        ' 
+        ' btnCreateTour
+        ' 
+        btnCreateTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        btnCreateTour.Location = New Point(53, 38)
+        btnCreateTour.Name = "btnCreateTour"
+        btnCreateTour.Size = New Size(161, 19)
+        btnCreateTour.TabIndex = 1
+        btnCreateTour.Text = "Create a tour"
+        btnCreateTour.UseVisualStyleBackColor = True
+        ' 
+        ' btnModifyTour
+        ' 
+        btnModifyTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        btnModifyTour.Location = New Point(53, 86)
+        btnModifyTour.Name = "btnModifyTour"
+        btnModifyTour.Size = New Size(161, 19)
+        btnModifyTour.TabIndex = 2
+        btnModifyTour.Text = "Modify a Tour"
+        btnModifyTour.UseVisualStyleBackColor = True
+        ' 
+        ' btnCopyTour
+        ' 
+        btnCopyTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        btnCopyTour.Location = New Point(53, 62)
+        btnCopyTour.Name = "btnCopyTour"
+        btnCopyTour.Size = New Size(161, 19)
+        btnCopyTour.TabIndex = 3
+        btnCopyTour.Text = "Copy from Existing tour"
+        btnCopyTour.UseVisualStyleBackColor = True
+        ' 
+        ' MainInterface
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 13F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1219, 566)
+        Controls.Add(btnCopyTour)
+        Controls.Add(btnModifyTour)
+        Controls.Add(btnCreateTour)
+        Controls.Add(Label1)
+        Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Name = "MainInterface"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "HomePage"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnCreateTour As Button
+    Friend WithEvents btnModifyTour As Button
+    Friend WithEvents btnCopyTour As Button
 
 End Class
