@@ -1,4 +1,6 @@
-﻿Imports TimebusB2.MainInterface
+﻿Imports System.ComponentModel
+Imports System.Transactions
+Imports TimebusB2.MainInterface
 
 Public Class CreateTour
 
@@ -169,6 +171,7 @@ Public Class CreateTour
         progressDuration.Value = 0
         lblDurationstatus.Text = "0.0/6 hours" ' Reset the duration status label
 
+
     End Sub
 
 
@@ -182,45 +185,43 @@ Public Class CreateTour
 
 
 
-    Private Sub btnSpawn_Click(sender As Object, e As EventArgs) Handles btnAdder.Click
+    'Private Sub btnSpawn_Click(sender As Object, e As EventArgs) Handles btnAdder.Click
 
-        If ListBox1.SelectedItem Is Nothing Then
-            MessageBox.Show("Please select a country.", "Warning")
-            Return
-        End If
+    '    If ListBox1.SelectedItem Is Nothing Then
+    '        MessageBox.Show("Please select a country.", "Warning")
+    '        Return
+    '    End If
 
-        Dim selectedCountry As String = ListBox1.SelectedItem.ToString()
-        Dim labeldata As String = lblPlaceName.Text
+    '    Dim selectedCountry As String = ListBox1.SelectedItem.ToString()
+    '    Dim labeldata As String = lblPlaceName.Text
 
-        Dim duration As Double
-        If Not Double.TryParse(txtDuration.Text, duration) Then
-            MessageBox.Show("Please enter a valid duration in hours (e.g., 1, 1.5).", "Invalid Input")
-            Return
-        End If
-
-
-        ' Check if adding this duration would exceed the 6-hour limit
-        If cumulativeDuration + duration > 6.0 Then
-            MessageBox.Show("Cannot add this stop. Exceeds maximum tour duration of 6 hours.", "Limit Exceeded")
-            Return
-        End If
-
-        If stopCount >= 6 Then
-            MessageBox.Show("Cannot add more stops. Maximum of 6 stops reached.", "Limit Exceeded")
-            Return
-        End If
+    '    Dim duration As Double
+    '    If Not Double.TryParse(txtDuration.Text, duration) Then
+    '        MessageBox.Show("Please enter a valid duration in hours (e.g., 1, 1.5).", "Invalid Input")
+    '        Return
+    '    End If
 
 
+    '    ' Check if adding this duration would exceed the 6-hour limit
+    '    If cumulativeDuration + duration > 6.0 Then
+    '        MessageBox.Show("Cannot add this stop. Exceeds maximum tour duration of 6 hours.", "Limit Exceeded")
+    '        Return
+    '    End If
+
+    '    If stopCount >= 6 Then
+    '        MessageBox.Show("Cannot add more stops. Maximum of 6 stops reached.", "Limit Exceeded")
+    '        Return
+    '    End If
 
 
 
-        ' Update the cumulative duration and the progress bar
-        cumulativeDuration += duration
-        progressDuration.Value = CInt((cumulativeDuration / 6.0) * progressDuration.Maximum)
-
-        lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
 
 
+    '    ' Update the cumulative duration and the progress bar
+    '    cumulativeDuration += duration
+    '    progressDuration.Value = CInt((cumulativeDuration / 6.0) * progressDuration.Maximum)
+
+    '    lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
 
 
 
@@ -228,90 +229,78 @@ Public Class CreateTour
 
 
 
-        ' Update counters
-        stopCount += 1
+
+
+    '    ' Update counters
+    '    stopCount += 1
 
 
 
-        serialNumber += 1
+    '    serialNumber += 1
 
-        ' Clear the duration input for the next entry
-        txtDuration.Clear()
-
-
-
-        Dim newBox As New Button With {
-        .Text = lblPlaceName.Text,
-        .Width = 65,
-        .Height = 65,
-        .BackColor = Color.Black,
-        .ForeColor = Color.Red,
-        .FlatStyle = FlatStyle.Flat
-    }
-        newBox.FlatAppearance.BorderSize = 0
-        Dim PanelName As String = "panelTripSummary"
+    '    ' Clear the duration input for the next entry
+    '    txtDuration.Clear()
 
 
-        AddHandler newBox.Click, Sub(senderObj, args)
-                                     ShowDataPanel(PanelName)
-                                 End Sub
 
-        Dim boxNumber As Integer = 0
-        Dim reusedIndex As Integer = -1
-        Dim boxData As String
+    '    Dim newBox As New Button With {
+    '    .Text = lblPlaceName.Text,
+    '    .Width = 65,
+    '    .Height = 65,
+    '    .BackColor = Color.Black,
+    '    .ForeColor = Color.Red,
+    '    .FlatStyle = FlatStyle.Flat
+    '}
+    '    newBox.FlatAppearance.BorderSize = 0
+    '    Dim PanelName As String = "panelTripSummary"
 
 
+    '    AddHandler newBox.Click, Sub(senderObj, args)
+    '                                 ShowDataPanel(PanelName)
+    '                             End Sub
+
+    '    Dim boxNumber As Integer = 0
+    '    Dim reusedIndex As Integer = -1
+    '    Dim boxData As String
 
 
 
 
-        For i As Integer = 0 To boxList.Count - 1
-            If boxList(i) Is Nothing Then
-                reusedIndex = i
-                boxData = lblPlaceName.Text
-                Exit For
-            End If
-        Next
+
+
+    '    For i As Integer = 0 To boxList.Count - 1
+    '        If boxList(i) Is Nothing Then
+    '            reusedIndex = i
+    '            boxData = lblPlaceName.Text
+    '            Exit For
+    '        End If
+    '    Next
 
 
 
-        If reusedIndex = -1 Then
-            boxNumber = boxCounter
-            newBox.BackColor = Color.Black
+    '    If reusedIndex = -1 Then
+    '        boxNumber = boxCounter
+    '        newBox.BackColor = Color.Black
 
 
-            newBox.ForeColor = Color.White
-            boxList.Add(newBox)
-            boxCounter += 1
-        Else
-            newBox.BackColor = Color.Green
-            newBox.ForeColor = Color.White
+    '        newBox.ForeColor = Color.White
+    '        boxList.Add(newBox)
+    '        boxCounter += 1
+    '    Else
+    '        newBox.BackColor = Color.Green
+    '        newBox.ForeColor = Color.White
 
 
-            boxList(reusedIndex) = newBox
-        End If
+    '        boxList(reusedIndex) = newBox
+    '    End If
 
-        newBox.Text = lblPlaceName.Text
-        panelBoxes.Controls.Add(newBox)
-        PositionBoxes()
+    '    newBox.Text = lblPlaceName.Text
+    '    panelBoxes.Controls.Add(newBox)
+    '    PositionBoxes()
 
 
-    End Sub
-    Private Sub ShowDataPanel(title As String)
-        ' Retrieve country details if available
-        If countryDetails.ContainsKey(title) Then
-            Dim info As CountryInfo = countryDetails(title)
+    'End Sub
 
-            ' Set the panel controls with country details
-            Label1.Text = title
-            Label14.Text = info.Description
-
-            ' Make the data panel visible
-            panelTripSummary.Visible = True
-        Else
-            MessageBox.Show("Details not found for this country.", "Information")
-        End If
-    End Sub
 
 
     Private Sub PositionBoxes()
@@ -339,6 +328,149 @@ Public Class CreateTour
 
 
 
+    Dim stopDetailsList As New List(Of StopDetails)
+
+    Private Sub btnAdder_Click(sender As Object, e As EventArgs) Handles btnAdder.Click
+        ' Ensure a location is selected
+        If ListBox1.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a country.", "Warning")
+            Return
+        End If
+
+        Dim selectedCountry As String = ListBox1.SelectedItem.ToString()
+        Dim duration As Double
+        Dim order As Integer
+
+        ' Validate duration input
+        If Not Double.TryParse(txtDuration.Text, duration) Then
+            MessageBox.Show("Please enter a valid duration in hours (e.g., 1, 1.5).", "Invalid Input")
+            Return
+        End If
+        If Not Integer.TryParse(NumericUpDown1.Value, order) Then
+            MessageBox.Show("Please Enter a valid Stop from (1-12)", "Invalid Input")
+        End If
+
+        ' Check cumulative duration limit
+        If cumulativeDuration + duration > 6.0 Then
+            MessageBox.Show("Cannot add this stop. Exceeds maximum tour duration of 6 hours.", "Limit Exceeded")
+            Return
+        End If
+
+        ' Create a new StopDetails instance
+        Dim stopDetails As New StopDetails(selectedCountry, duration, order)
+
+        ' Create a new button for the stop
+        Dim newButton As New Button With {
+        .Text = selectedCountry,
+        .Width = 65,
+        .Height = 65,
+        .BackColor = Color.Black,
+        .ForeColor = Color.Red,
+        .FlatStyle = FlatStyle.Flat,
+        .Tag = stopDetails
+    }
+
+        ' Add click handler to the button
+        AddHandler newButton.Click, AddressOf StopButton_Click
+
+        ' Add button to the panel
+        panelBoxes.Controls.Add(newButton)
+
+        ' Update the stop details list
+        stopDetails.Button = newButton
+        stopDetailsList.Add(stopDetails)
+
+        ' Update cumulative duration
+        cumulativeDuration += duration
+        progressDuration.Value = CInt((cumulativeDuration / 6.0) * progressDuration.Maximum)
+        lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
+
+        ' Clear input fields
+        txtDuration.Clear()
+
+        ' Reposition all buttons dynamically
+        PositionBoxes2()
+    End Sub
+
+
+
+
+
+    ' Dynamically arrange buttons in the panel
+    Private Sub PositionBoxes2()
+        Dim x As Integer = 10
+        Dim y As Integer = 10
+        Dim margin As Integer = 5
+
+        For Each btn As Button In panelBoxes.Controls.OfType(Of Button)()
+            btn.Location = New Point(x, y)
+            x += btn.Width + margin
+            If x + btn.Width > panelBoxes.Width Then
+                x = 10
+                y += btn.Height + margin
+            End If
+        Next
+    End Sub
+
+
+    Private Sub StopButton_Click(sender As Object, e As EventArgs)
+        Dim clickedButton As Button = CType(sender, Button)
+        Dim stopDetails As StopDetails = CType(clickedButton.Tag, StopDetails)
+
+        ' Display trip summary with options to edit or delete
+        Dim result As DialogResult = MessageBox.Show($"Stop Name: {stopDetails.LocationName}{Environment.NewLine}" &
+                                                    $"Stop Order: {stopDetails.Order}{Environment.NewLine}" &
+                                                 $"Duration: {stopDetails.Duration} hours{Environment.NewLine}" &
+                                                 $"{Environment.NewLine}" &
+                                                 "Press 'Yes' to Edit, 'No' to Delete this stop.",
+                                                 "Edit/Delete Stop", MessageBoxButtons.YesNoCancel)
+
+        If result = DialogResult.Yes Then
+            ' Edit the stop
+            Dim newDurationStr As String = InputBox("Enter new duration (in hours):", "Edit Duration", stopDetails.Duration.ToString())
+            Dim newDuration As Double
+            Dim newOrderStr As String = InputBox("Enter new Order (in integers):", "Edit Visit Order", stopDetails.Order.ToString())
+            Dim newOrder As Integer
+
+            If Double.TryParse(newDurationStr, newDuration) AndAlso (cumulativeDuration - stopDetails.Duration + newDuration <= 6.0) Then
+                ' Update duration
+                cumulativeDuration = cumulativeDuration - stopDetails.Duration + newDuration
+                stopDetails.Duration = newDuration
+                lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
+                progressDuration.Value = CInt((cumulativeDuration / 6.0) * progressDuration.Maximum)
+            Else
+                MessageBox.Show("Invalid or exceeding duration. Edit canceled.", "Error")
+            End If
+
+            If Integer.TryParse(newOrderStr, newOrder) Then
+                stopDetails.Order = newOrder
+            End If
+        ElseIf result = DialogResult.No Then
+            ' Delete the stop
+            cumulativeDuration -= stopDetails.Duration
+            lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
+            progressDuration.Value = CInt((cumulativeDuration / 6.0) * progressDuration.Maximum)
+            stopDetailsList.Remove(stopDetails)
+            panelBoxes.Controls.Remove(clickedButton)
+            PositionBoxes2()
+        End If
+    End Sub
+
+    Public Class Trip
+        Public Property Stops As List(Of StopDetails)  ' List of stops
+        Public Property TotalDuration As Double  ' Total duration
+        Public Property TripName As String  ' Name of the trip
+
+        Public Sub New()
+            Stops = New List(Of StopDetails)()
+            TotalDuration = 0.0
+        End Sub
+    End Class
+
+
+
+
+
 
     Private Sub lbl2_Click(sender As Object, e As EventArgs)
 
@@ -359,4 +491,21 @@ Public Class CreateTour
     Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
+
+    Private Sub btnConfirmTrip_Click(sender As Object, e As EventArgs) Handles btnConfirmTrip.Click
+        ' Create a new Trip object and fill it with the current trip data
+        Dim trip As New Trip()
+        trip.TripName = lblTourName.Text
+        trip.TotalDuration = cumulativeDuration
+
+        ' Add all stops to the trip
+        For Each stops As StopDetails In stopDetailsList
+            trip.Stops.Add(stops)
+        Next
+
+        ' Pass the Trip object to the new form
+        Dim tripSummaryForm As New TripOK(trip)
+        tripSummaryForm.Show() ' Show the new form
+    End Sub
+
 End Class

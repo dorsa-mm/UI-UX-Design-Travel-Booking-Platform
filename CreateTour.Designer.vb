@@ -26,9 +26,11 @@ Partial Class CreateTour
         lblDesc = New Label()
         btnAdder = New Button()
         txtDuration = New TextBox()
+        NumericUpDown1 = New NumericUpDown()
         Label8 = New Label()
         boxPlace = New PictureBox()
         lblPlaceName = New Label()
+        Label12 = New Label()
         Panel2 = New Panel()
         Label9 = New Label()
         ListBox1 = New ListBox()
@@ -53,16 +55,6 @@ Partial Class CreateTour
         txtTimeLine = New TextBox()
         Label4 = New Label()
         panelTourStatus = New Panel()
-        panelTripSummary = New Panel()
-        Label14 = New Label()
-        Button4 = New Button()
-        Button3 = New Button()
-        NumericUpDown1 = New NumericUpDown()
-        Button2 = New Button()
-        Label13 = New Label()
-        Label12 = New Label()
-        Label11 = New Label()
-        Label1 = New Label()
         Panel4 = New Panel()
         panelBoxes = New Panel()
         Button1 = New Button()
@@ -77,6 +69,7 @@ Partial Class CreateTour
         txtTourName = New TextBox()
         lblTourNamePrompt = New Label()
         Panel3.SuspendLayout()
+        CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
         CType(boxPlace, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(mapBox, ComponentModel.ISupportInitialize).BeginInit()
@@ -84,8 +77,6 @@ Partial Class CreateTour
         panelAgeSelection.SuspendLayout()
         Panel1.SuspendLayout()
         panelTourStatus.SuspendLayout()
-        panelTripSummary.SuspendLayout()
-        CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
         panelCreateTour.SuspendLayout()
         SuspendLayout()
@@ -96,9 +87,11 @@ Partial Class CreateTour
         Panel3.Controls.Add(lblDesc)
         Panel3.Controls.Add(btnAdder)
         Panel3.Controls.Add(txtDuration)
+        Panel3.Controls.Add(NumericUpDown1)
         Panel3.Controls.Add(Label8)
         Panel3.Controls.Add(boxPlace)
         Panel3.Controls.Add(lblPlaceName)
+        Panel3.Controls.Add(Label12)
         Panel3.Location = New Point(381, 348)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(374, 189)
@@ -131,6 +124,16 @@ Partial Class CreateTour
         txtDuration.Size = New Size(100, 21)
         txtDuration.TabIndex = 3
         ' 
+        ' NumericUpDown1
+        ' 
+        NumericUpDown1.Location = New Point(323, 123)
+        NumericUpDown1.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
+        NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        NumericUpDown1.Name = "NumericUpDown1"
+        NumericUpDown1.Size = New Size(30, 21)
+        NumericUpDown1.TabIndex = 12
+        NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -157,6 +160,15 @@ Partial Class CreateTour
         lblPlaceName.Size = New Size(45, 13)
         lblPlaceName.TabIndex = 0
         lblPlaceName.Text = "Label7"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Location = New Point(233, 125)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(85, 13)
+        Label12.TabIndex = 2
+        Label12.Text = "Stop Number:"
         ' 
         ' Panel2
         ' 
@@ -384,7 +396,6 @@ Partial Class CreateTour
         ' panelTourStatus
         ' 
         panelTourStatus.BorderStyle = BorderStyle.FixedSingle
-        panelTourStatus.Controls.Add(panelTripSummary)
         panelTourStatus.Controls.Add(Panel4)
         panelTourStatus.Controls.Add(Button1)
         panelTourStatus.Controls.Add(lblTourName)
@@ -395,110 +406,9 @@ Partial Class CreateTour
         panelTourStatus.Controls.Add(lblDurationstatus)
         panelTourStatus.Location = New Point(381, 14)
         panelTourStatus.Name = "panelTourStatus"
-        panelTourStatus.Size = New Size(727, 335)
+        panelTourStatus.Size = New Size(537, 335)
         panelTourStatus.TabIndex = 12
         panelTourStatus.Visible = False
-        ' 
-        ' panelTripSummary
-        ' 
-        panelTripSummary.Controls.Add(Label14)
-        panelTripSummary.Controls.Add(Button4)
-        panelTripSummary.Controls.Add(Button3)
-        panelTripSummary.Controls.Add(NumericUpDown1)
-        panelTripSummary.Controls.Add(Button2)
-        panelTripSummary.Controls.Add(Label13)
-        panelTripSummary.Controls.Add(Label12)
-        panelTripSummary.Controls.Add(Label11)
-        panelTripSummary.Controls.Add(Label1)
-        panelTripSummary.Location = New Point(515, 60)
-        panelTripSummary.Name = "panelTripSummary"
-        panelTripSummary.Size = New Size(200, 187)
-        panelTripSummary.TabIndex = 15
-        panelTripSummary.Visible = False
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Location = New Point(12, 104)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(96, 13)
-        Label14.TabIndex = 15
-        Label14.Text = "Visit Duration:"
-        ' 
-        ' Button4
-        ' 
-        Button4.Location = New Point(118, 163)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(71, 21)
-        Button4.TabIndex = 14
-        Button4.Text = "OK"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Location = New Point(12, 163)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(71, 21)
-        Button3.TabIndex = 13
-        Button3.Text = "Delete"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' NumericUpDown1
-        ' 
-        NumericUpDown1.Location = New Point(93, 11)
-        NumericUpDown1.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
-        NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(30, 21)
-        NumericUpDown1.TabIndex = 12
-        NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.Transparent
-        Button2.ForeColor = Color.Red
-        Button2.Location = New Point(176, 3)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(21, 23)
-        Button2.TabIndex = 8
-        Button2.Text = "X"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Location = New Point(114, 104)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(51, 13)
-        Label13.TabIndex = 3
-        Label13.Text = "Label13"
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Location = New Point(3, 13)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(84, 13)
-        Label12.TabIndex = 2
-        Label12.Text = "Trip Number:"
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Location = New Point(12, 58)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(51, 13)
-        Label11.TabIndex = 1
-        Label11.Text = "Label11"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(3, 45)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(71, 13)
-        Label1.TabIndex = 0
-        Label1.Text = "Visit Name:"
         ' 
         ' Panel4
         ' 
@@ -630,7 +540,7 @@ Partial Class CreateTour
         ' 
         AutoScaleDimensions = New SizeF(7F, 13F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1120, 603)
+        ClientSize = New Size(929, 603)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(panelContinent)
@@ -644,6 +554,7 @@ Partial Class CreateTour
         Text = "CreateTour"
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        CType(NumericUpDown1, ComponentModel.ISupportInitialize).EndInit()
         CType(boxPlace, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
@@ -656,9 +567,6 @@ Partial Class CreateTour
         Panel1.PerformLayout()
         panelTourStatus.ResumeLayout(False)
         panelTourStatus.PerformLayout()
-        panelTripSummary.ResumeLayout(False)
-        panelTripSummary.PerformLayout()
-        CType(NumericUpDown1, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         panelCreateTour.ResumeLayout(False)
         panelCreateTour.PerformLayout()
@@ -709,14 +617,6 @@ Partial Class CreateTour
     Friend WithEvents btnTourSet As Button
     Friend WithEvents txtTourName As TextBox
     Friend WithEvents lblTourNamePrompt As Label
-    Friend WithEvents panelTripSummary As Panel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label14 As Label
 End Class
