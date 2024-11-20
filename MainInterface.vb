@@ -2,6 +2,7 @@
 
     Public trips As New List(Of Trip)
 
+
     Private Sub btnCreateTour_Click(sender As Object, e As EventArgs) Handles btnCreateTour.Click
         Me.Hide()
         Dim CreateTour As New CreateTour()
@@ -60,5 +61,9 @@
 
     Private Sub EndTour()
         Show()
+    End Sub
+
+    Private Sub MainInterface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

@@ -512,5 +512,12 @@
         Dim MI As New MainInterface()
         MI.Show()
         Me.Close()
+        If MI.trips.Count = 0 Then
+            MI.PilotBtn.Enabled = False
+            MI.Button1.Enabled = False
+        Else
+            MI.Button1.Enabled = True
+            MI.PilotBtn.Enabled = True
+        End If
     End Sub
 End Class

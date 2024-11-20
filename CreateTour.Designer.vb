@@ -69,6 +69,7 @@ Partial Class CreateTour
         txtTourName = New TextBox()
         lblTourNamePrompt = New Label()
         Button2 = New Button()
+        Label1 = New Label()
         Panel3.SuspendLayout()
         CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
         CType(boxPlace, ComponentModel.ISupportInitialize).BeginInit()
@@ -413,6 +414,7 @@ Partial Class CreateTour
         ' Panel4
         ' 
         Panel4.BorderStyle = BorderStyle.Fixed3D
+        Panel4.Controls.Add(Label1)
         Panel4.Controls.Add(panelBoxes)
         Panel4.Location = New Point(6, 38)
         Panel4.Name = "Panel4"
@@ -545,6 +547,15 @@ Partial Class CreateTour
         Button2.Text = "Back to Home"
         Button2.UseVisualStyleBackColor = True
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(19, 30)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(133, 13)
+        Label1.TabIndex = 4
+        Label1.Text = "Click on trips to edit"
+        ' 
         ' CreateTour
         ' 
         AutoScaleDimensions = New SizeF(7F, 13F)
@@ -578,6 +589,7 @@ Partial Class CreateTour
         panelTourStatus.ResumeLayout(False)
         panelTourStatus.PerformLayout()
         Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         panelCreateTour.ResumeLayout(False)
         panelCreateTour.PerformLayout()
         ResumeLayout(False)
@@ -631,4 +643,5 @@ Partial Class CreateTour
     Friend WithEvents Label12 As Label
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label1 As Label
 End Class
