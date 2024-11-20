@@ -212,12 +212,11 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim EM As New Emergency_Procedure()
-        EM.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub VisitorView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim endTour As New EndOfTour
+        slideTimer.Stop()
+        progressTimer.Stop()
+        AddHandler endTour.EndTour, AddressOf TourEnded
+        endTour.Show()
+        Close()
     End Sub
 End Class
