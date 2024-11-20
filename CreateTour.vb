@@ -311,8 +311,8 @@
 
 
     Private Sub PositionBoxes()
-        Dim boxWidth As Integer = 65
-        Dim boxHeight As Integer = 65
+        Dim boxWidth As Integer = 80
+        Dim boxHeight As Integer = 80
         Dim spacing As Integer = 5
         Dim maxPanelWidth As Integer = panelBoxes.Width
         Dim boxesPerRow As Integer = maxPanelWidth \ (boxWidth + spacing)
@@ -368,8 +368,8 @@
         ' Create a new button for the stop
         Dim newButton As New Button With {
         .Text = selectedCountry,
-        .Width = 65,
-        .Height = 65,
+        .Width = 80,
+        .Height = 80,
         .BackColor = Color.Black,
         .ForeColor = Color.Red,
         .FlatStyle = FlatStyle.Flat,

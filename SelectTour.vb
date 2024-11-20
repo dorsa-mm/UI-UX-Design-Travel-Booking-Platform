@@ -3,6 +3,7 @@
     Public Event Confirm(trip As Trip)
     Private _isModify As Boolean
     Private _isPilot As Boolean
+    Public Event TourEnd()
 
     Public Sub New(trips As List(Of Trip), isModify As Boolean, isPilot As Boolean)
 
@@ -47,12 +48,18 @@
             ModifyTour.Show()
         ElseIf _isModify And _isPilot Then
             Dim Cockpit As New CockpitForm(trip)
+            AddHandler Cockpit.TourEnd, AddressOf EndedTour
             Cockpit.Show()
         Else
             Dim Visitor As New VisitorView(trip)
+            AddHandler Visitor.TourEnd, AddressOf EndedTour
             Visitor.Show()
         End If
         Close()
+    End Sub
+
+    Private Sub EndedTour()
+        RaiseEvent TourEnd()
     End Sub
 
     Private Sub Modified(trip As Trip)

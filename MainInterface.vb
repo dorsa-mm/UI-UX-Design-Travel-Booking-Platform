@@ -46,13 +46,19 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim selectTour As New SelectTour(trips, False, False)
+        AddHandler selectTour.TourEnd, AddressOf EndTour
         selectTour.Show()
         Hide()
     End Sub
 
     Private Sub PilotBtn_Click(sender As Object, e As EventArgs) Handles PilotBtn.Click
         Dim selectTour As New SelectTour(trips, False, True)
+        AddHandler selectTour.TourEnd, AddressOf EndTour
         selectTour.Show()
         Hide()
+    End Sub
+
+    Private Sub EndTour()
+        Show()
     End Sub
 End Class
