@@ -1,5 +1,6 @@
 ﻿Public Class CockpitForm
     Private _trip As Trip
+    Public Event TourEnd()
 
     Public Sub New(trip As Trip)
 

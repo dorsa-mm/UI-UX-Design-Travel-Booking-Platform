@@ -22,9 +22,19 @@ Partial Class VisitorView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.WindowBox = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ZoomIn = New System.Windows.Forms.PictureBox()
+        Me.ZoomOut = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.AromaUp = New System.Windows.Forms.PictureBox()
+        Me.AromaDown = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
@@ -51,6 +61,7 @@ Partial Class VisitorView
         Me.Brightness = New System.Windows.Forms.PictureBox()
         Me.Volume = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Information = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TourLocation = New System.Windows.Forms.Label()
@@ -60,10 +71,19 @@ Partial Class VisitorView
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
         CType(Me.WindowBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.ZoomIn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZoomOut, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AromaUp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AromaDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,30 +111,61 @@ Partial Class VisitorView
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
+        'WindowBox
+        '
+        Me.WindowBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.WindowBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.WindowBox.Location = New System.Drawing.Point(-39, -23)
+        Me.WindowBox.Name = "WindowBox"
+        Me.WindowBox.Size = New System.Drawing.Size(864, 727)
+        Me.WindowBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.WindowBox.TabIndex = 0
+        Me.WindowBox.TabStop = False
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.ZoomIn)
+        Me.Panel1.Controls.Add(Me.ZoomOut)
         Me.Panel1.Controls.Add(Me.WindowBox)
         Me.Panel1.Location = New System.Drawing.Point(11, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(772, 683)
         Me.Panel1.TabIndex = 0
         '
-        'WindowBox
+        'ZoomIn
         '
-        Me.WindowBox.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.WindowBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.WindowBox.Location = New System.Drawing.Point(15, 15)
-        Me.WindowBox.Name = "WindowBox"
-        Me.WindowBox.Size = New System.Drawing.Size(742, 649)
-        Me.WindowBox.TabIndex = 0
-        Me.WindowBox.TabStop = False
+        Me.ZoomIn.Image = Global.TimebusB2.My.Resources.Resources.zoom_in
+        Me.ZoomIn.Location = New System.Drawing.Point(561, 608)
+        Me.ZoomIn.Name = "ZoomIn"
+        Me.ZoomIn.Size = New System.Drawing.Size(64, 62)
+        Me.ZoomIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ZoomIn.TabIndex = 2
+        Me.ZoomIn.TabStop = False
+        '
+        'ZoomOut
+        '
+        Me.ZoomOut.Image = Global.TimebusB2.My.Resources.Resources.zoom_out
+        Me.ZoomOut.Location = New System.Drawing.Point(689, 608)
+        Me.ZoomOut.Name = "ZoomOut"
+        Me.ZoomOut.Size = New System.Drawing.Size(66, 62)
+        Me.ZoomOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ZoomOut.TabIndex = 1
+        Me.ZoomOut.TabStop = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.PictureBox17)
+        Me.Panel2.Controls.Add(Me.PictureBox18)
+        Me.Panel2.Controls.Add(Me.PictureBox19)
+        Me.Panel2.Controls.Add(Me.PictureBox20)
+        Me.Panel2.Controls.Add(Me.PictureBox21)
+        Me.Panel2.Controls.Add(Me.AromaUp)
+        Me.Panel2.Controls.Add(Me.AromaDown)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.PictureBox12)
         Me.Panel2.Controls.Add(Me.PictureBox13)
         Me.Panel2.Controls.Add(Me.PictureBox14)
@@ -144,6 +195,86 @@ Partial Class VisitorView
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(618, 309)
         Me.Panel2.TabIndex = 1
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.BackColor = System.Drawing.Color.DarkGray
+        Me.PictureBox17.Location = New System.Drawing.Point(390, 239)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(29, 53)
+        Me.PictureBox17.TabIndex = 33
+        Me.PictureBox17.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.BackColor = System.Drawing.Color.DarkGray
+        Me.PictureBox18.Location = New System.Drawing.Point(355, 239)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(29, 53)
+        Me.PictureBox18.TabIndex = 32
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.BackColor = System.Drawing.Color.GreenYellow
+        Me.PictureBox19.Location = New System.Drawing.Point(320, 239)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(29, 53)
+        Me.PictureBox19.TabIndex = 31
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.BackColor = System.Drawing.Color.GreenYellow
+        Me.PictureBox20.Location = New System.Drawing.Point(285, 239)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(29, 53)
+        Me.PictureBox20.TabIndex = 30
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.BackColor = System.Drawing.Color.GreenYellow
+        Me.PictureBox21.Location = New System.Drawing.Point(250, 239)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(29, 53)
+        Me.PictureBox21.TabIndex = 29
+        Me.PictureBox21.TabStop = False
+        '
+        'AromaUp
+        '
+        Me.AromaUp.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.AromaUp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AromaUp.Image = Global.TimebusB2.My.Resources.Resources.green_up
+        Me.AromaUp.Location = New System.Drawing.Point(93, 239)
+        Me.AromaUp.Name = "AromaUp"
+        Me.AromaUp.Size = New System.Drawing.Size(71, 53)
+        Me.AromaUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.AromaUp.TabIndex = 28
+        Me.AromaUp.TabStop = False
+        '
+        'AromaDown
+        '
+        Me.AromaDown.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.AromaDown.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AromaDown.Image = Global.TimebusB2.My.Resources.Resources.blue_down
+        Me.AromaDown.Location = New System.Drawing.Point(170, 239)
+        Me.AromaDown.Name = "AromaDown"
+        Me.AromaDown.Size = New System.Drawing.Size(74, 53)
+        Me.AromaDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.AromaDown.TabIndex = 27
+        Me.AromaDown.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.PictureBox1.Image = Global.TimebusB2.My.Resources.Resources.aroma
+        Me.PictureBox1.Location = New System.Drawing.Point(23, 239)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(64, 53)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 26
+        Me.PictureBox1.TabStop = False
         '
         'PictureBox12
         '
@@ -413,12 +544,20 @@ Partial Class VisitorView
         Me.Panel3.Size = New System.Drawing.Size(617, 366)
         Me.Panel3.TabIndex = 2
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(466, 67)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(118, 29)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Skip Next Visit"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Information
         '
-        Me.Information.AutoSize = True
         Me.Information.Location = New System.Drawing.Point(122, 107)
         Me.Information.Name = "Information"
-        Me.Information.Size = New System.Drawing.Size(53, 20)
+        Me.Information.Size = New System.Drawing.Size(296, 245)
         Me.Information.TabIndex = 6
         Me.Information.Text = "Label4"
         '
@@ -493,15 +632,6 @@ Partial Class VisitorView
         Me.ProgressBar1.Size = New System.Drawing.Size(1256, 23)
         Me.ProgressBar1.TabIndex = 4
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(466, 67)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(118, 29)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Skip Next Visit"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'VisitorView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -514,10 +644,20 @@ Partial Class VisitorView
         Me.Controls.Add(Me.Panel1)
         Me.Name = "VisitorView"
         Me.Text = "VisitorView"
-        Me.Panel1.ResumeLayout(False)
         CType(Me.WindowBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.ZoomIn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZoomOut, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AromaUp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AromaDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
@@ -588,4 +728,14 @@ Partial Class VisitorView
     Friend WithEvents Label4 As Label
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents PictureBox18 As PictureBox
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents PictureBox20 As PictureBox
+    Friend WithEvents PictureBox21 As PictureBox
+    Friend WithEvents AromaUp As PictureBox
+    Friend WithEvents AromaDown As PictureBox
+    Friend WithEvents ZoomIn As PictureBox
+    Friend WithEvents ZoomOut As PictureBox
 End Class
