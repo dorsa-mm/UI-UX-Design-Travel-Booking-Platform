@@ -10,12 +10,12 @@ Public Class ExistingTrip
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim time1 As Integer = Label3.Text
         ' Create a new Trip object and fill it with the current trip data
-        Dim trip As New CreateTour.Trip()
+        Dim trip As New Trip
         trip.TripName = ToolStripStatusLabel1.Text
         trip.TotalDuration = time1
 
         ' Add all stops to the trip
-        For Each stops As StopDetails In stopDetailsList1
+        For Each stops In stopDetailsList1
             trip.Stops.Add(stops)
         Next
 
