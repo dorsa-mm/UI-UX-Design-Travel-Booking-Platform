@@ -104,8 +104,8 @@
 
     Private Sub BrightnessDown_Click(sender As Object, e As EventArgs) Handles BrightnessDown.Click
         For i As Integer = brightnessRow.Length - 1 To 0 Step -1
-            If volumeRow(i).BackColor <> Color.Gray Then
-                volumeRow(i).BackColor = Color.Gray
+            If brightnessRow(i).BackColor <> Color.Gray Then
+                brightnessRow(i).BackColor = Color.Gray
                 Exit Sub
             End If
         Next
@@ -122,8 +122,8 @@
 
     Private Sub TempDown_Click(sender As Object, e As EventArgs) Handles TempDown.Click
         For i As Integer = temperatureRow.Length - 1 To 0 Step -1
-            If volumeRow(i).BackColor <> Color.Gray Then
-                volumeRow(i).BackColor = Color.Gray
+            If temperatureRow(i).BackColor <> Color.Gray Then
+                temperatureRow(i).BackColor = Color.Gray
                 Exit Sub
             End If
         Next
@@ -140,8 +140,8 @@
 
     Private Sub AromaDown_Click(sender As Object, e As EventArgs) Handles AromaDown.Click
         For i As Integer = aromaRow.Length - 1 To 0 Step -1
-            If volumeRow(i).BackColor <> Color.Gray Then
-                volumeRow(i).BackColor = Color.Gray
+            If aromaRow(i).BackColor <> Color.Gray Then
+                aromaRow(i).BackColor = Color.Gray
                 Exit Sub
             End If
         Next
