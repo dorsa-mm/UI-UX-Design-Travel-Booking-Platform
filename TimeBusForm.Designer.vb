@@ -22,53 +22,55 @@ Partial Class TimeBusForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        Button1 = New Button()
-        Label2 = New Label()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(85, 9)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(364, 33)
-        Label1.TabIndex = 1
-        Label1.Text = "Welcome to Timebus Inc."
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(95, 132)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(339, 23)
-        Button1.TabIndex = 2
-        Button1.Text = "Start the program"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(41, 100)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(531, 14)
-        Label2.TabIndex = 3
-        Label2.Text = "By Clicking on this button, You agree to the terms and conditions of TimeBus Inc."
-        ' 
-        ' TimeBusForm
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 14F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(584, 180)
-        Controls.Add(Label2)
-        Controls.Add(Button1)
-        Controls.Add(Label1)
-        Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Name = "TimeBusForm"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "TimeBus.B2"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(156, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(464, 43)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Welcome to Timebus Inc."
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(215, 140)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(339, 33)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Start the program"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(71, 97)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(668, 18)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "By Clicking on this button, You agree to the terms and conditions of TimeBus Inc." &
+    ""
+        '
+        'TimeBusForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(803, 283)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Stencil", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Name = "TimeBusForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "TimeBus.B2"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label1 As Label

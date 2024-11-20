@@ -1,118 +1,176 @@
-﻿Imports TimebusB2.CreateTour
+﻿Public Class ModifyTour
+    Private _trips As Trip
+    Private isDragging As Boolean = False
+    Private draggedPanel As Panel
+    Private startPoint As Point
+    Public Event Confirm(trip As Trip)
 
-Public Class ModifyTour
-    Private orderMapping As Dictionary(Of Label, TextBox)
-    Private spotMapping As Dictionary(Of Label, TextBox)
-    Private durationMapping As Dictionary(Of Label, TextBox)
-    Private titleMapping As Dictionary(Of Label, TextBox)
+    Public Sub New(trip As Trip)
 
-    Private Sub AAA(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Initialize trip details here or dynamically load them from data storage
-        InitializeTrips()
+        ' This call is required by the designer.
+        InitializeComponent()
 
-        For i As Integer = 1 To 6
-            Dim durationLabel As Label = TryCast(Me.Controls($"lblDur{i}"), Label)
-            If durationLabel IsNot Nothing Then
-                AddHandler durationLabel.Click, AddressOf Label_Click
-            End If
+        ' Add any initialization after the InitializeComponent() call.
+        _trips = trip
 
-            Dim spotLabel As Label = TryCast(Me.Controls($"lblSpot{i}"), Label)
-            If spotLabel IsNot Nothing Then
-                AddHandler spotLabel.Click, AddressOf Label_Click
+        For i As Integer = 0 To _trips.Stops.Count - 1
+            CreateDraggablePanel(Panel2, i)
+        Next
+        lblTripName1.Text = _trips.TripName
+    End Sub
+
+    Private Class DraggablePanel
+        Inherits Panel
+        Public PanelIndex As Integer
+        Public CanDrag As Boolean
+    End Class
+
+    Private Sub CreateDraggablePanel(container As Panel, index As Integer)
+        ' Create panel
+        Dim panel As New DraggablePanel
+        panel.Size = New Size(150, 110)
+        panel.Location = New Point(10 + (index * 160), 15)
+        panel.BorderStyle = BorderStyle.FixedSingle
+        panel.BackColor = Color.LightGray
+        'panel.CanDrag = Not _trips.Stops(index).visited
+        panel.PanelIndex = index
+
+        Dim guid As New Label
+        guid.Text = _trips.Stops(index).guid
+        panel.Controls.Add(guid)
+        guid.Hide()
+
+        Dim lbl As New Label
+        lbl.AutoSize = False
+        lbl.Size = New Size(130, 25)
+        lbl.Location = New Point(10, 10)
+        lbl.TextAlign = ContentAlignment.MiddleCenter
+        lbl.BorderStyle = BorderStyle.FixedSingle
+        lbl.BackColor = Color.White
+        lbl.Text = _trips.Stops(index).LocationName
+        panel.Controls.Add(lbl)
+
+        Dim text As New TextBox
+        text.AutoSize = False
+        text.Size = New Size(130, 25)
+        text.Location = New Point(10, 45)
+        text.BorderStyle = BorderStyle.FixedSingle
+        text.Text = _trips.Stops(index).Duration
+        'text.Enabled = Not _trips.Stops(index).visited
+        panel.Controls.Add(text)
+
+        ' Add event handlers for drag and drop
+        AddHandler panel.MouseDown, AddressOf Panel_MouseDown
+        AddHandler panel.MouseMove, AddressOf Panel_MouseMove
+        AddHandler panel.MouseUp, AddressOf Panel_MouseUp
+
+        container.Controls.Add(panel)
+    End Sub
+
+    ' Add this new function to get durations and total
+    Public Function GetDurationsAndTotal() As (List(Of Double), Double, List(Of String))
+        Dim durations As New List(Of Double)
+        Dim guidList As New List(Of String)
+        Dim total As Double = 0
+
+        ' Get the container panel
+        Dim containerPanel = Panel2
+
+        ' Get all panels sorted by X position
+        Dim panels = containerPanel.Controls.Cast(Of Panel)() _
+                    .OrderBy(Function(p) p.Location.X) _
+                    .ToList()
+
+        ' Get duration from each panel's textbox
+        For Each panel In panels
+            Dim txtDuration As TextBox = panel.Controls.OfType(Of TextBox)().First()
+            guidList.Add(panel.Controls.OfType(Of Label)().First().Text)
+            Dim duration As Double
+            If Double.TryParse(txtDuration.Text, duration) Then
+                durations.Add(duration)
+                total += duration
             End If
         Next
 
-        orderMapping = New Dictionary(Of Label, TextBox) From {
-            {lblOrder1, TextBox1},
-            {lblOrder2, TextBox1},
-            {lblOrder3, TextBox1},
-            {lblOrder4, TextBox1},
-            {lblOrder5, TextBox1},
-            {lblOrder6, TextBox1}
-        }
+        Return (durations, total, guidList)
+    End Function
 
-        spotMapping = New Dictionary(Of Label, TextBox) From {
-            {lblSpot1, TextBox2},
-            {lblSpot2, TextBox2},
-            {lblSpot3, TextBox2},
-            {lblSpot4, TextBox2},
-            {lblSpot5, TextBox2},
-            {lblSpot6, TextBox2}
-        }
+    Private Sub Panel_MouseDown(sender As Object, e As MouseEventArgs)
+        Dim panel As DraggablePanel = DirectCast(sender, DraggablePanel)
 
-        durationMapping = New Dictionary(Of Label, TextBox) From {
-            {lblDur1, TextBox3},
-            {lblDur2, TextBox3},
-            {lblDur3, TextBox3},
-            {lblDur4, TextBox3},
-            {lblDur5, TextBox3},
-            {lblDur6, TextBox3}
-        }
-        titleMapping = New Dictionary(Of Label, TextBox) From {
-            {lblTripName1, TextBox4}}
-
-
-
-
-
-
-    End Sub
-
-    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged
-        ' Check if a label is selected before making any changes
-        If lblSelected IsNot Nothing Then
-            Dim textBox = DirectCast(sender, TextBox)
-
-            ' Update only the selected label
-            If textBox Is TextBox1 Then
-                lblSelected.Text = textBox.Text ' Update only the selected order label
-            ElseIf textBox Is TextBox2 Then
-                lblSelected.Text = textBox.Text ' Update only the selected spot label
-            ElseIf textBox Is TextBox3 Then
-                lblSelected.Text = textBox.Text ' Update only the selected duration label
-
-            ElseIf textBox Is TextBox4 Then
-                lblSelected.Text = textBox.Text
-            End If
+        If e.Button = MouseButtons.Left AndAlso panel.CanDrag Then
+            isDragging = True
+            draggedPanel = DirectCast(sender, Panel)
+            startPoint = New Point(e.X, e.Y)
+            draggedPanel.BringToFront()
         End If
     End Sub
 
+    Private Sub Panel_MouseMove(sender As Object, e As MouseEventArgs)
+        If isDragging Then
+            Dim panel As DraggablePanel = DirectCast(sender, DraggablePanel)
+            Dim currentPoint As Point = panel.PointToScreen(New Point(e.X, e.Y))
+            currentPoint = panel.Parent.PointToClient(currentPoint)
 
-    Private Sub InitializeTrips()
-        ' Populate initial trip data (Example: hard-coded for now)
-        lblTripName1.Text = "Historical Landmarks"
-        lblOrder1.Text = "1"
-        lblOrder2.Text = "2"
-        lblOrder3.Text = "3"
-        lblOrder4.Text = "4"
-        lblOrder5.Text = "5"
-        lblOrder6.Text = "6"
-        lblSpot1.Text = "Ancient Rome"
-        lblSpot2.Text = "Ephesus"
-        lblSpot3.Text = "Jerusalem"
-        lblSpot4.Text = "Alexandria"
-        lblSpot5.Text = "Pompeii"
-        lblSpot6.Text = "Carthage"
-        lblDur1.Text = "1 hr"
-        lblDur2.Text = "1 hr"
-        lblDur3.Text = "1 hr"
-        lblDur4.Text = "1 hr"
-        lblDur5.Text = "1 hr"
-        lblDur6.Text = "1 hr"
-        ' Initialize dictionaries
+            ' Calculate new position
+            Dim newX As Integer = currentPoint.X - startPoint.X
 
+            ' Restrict movement to horizontal only and within container bounds
+            If newX < 0 Then
+                newX = 0
+            ElseIf newX + panel.Width > panel.Parent.Width Then
+                newX = panel.Parent.Width - panel.Width
+            End If
 
-        ' Assign TextChanged events dynamically
-
+            ' Update panel position (horizontal only)
+            panel.Location = New Point(newX, panel.Location.Y)
+        End If
     End Sub
 
+    Private Sub Panel_MouseUp(sender As Object, e As MouseEventArgs)
+        isDragging = False
 
+        If draggedPanel IsNot Nothing Then
+            ' Snap to nearest valid position
+            Dim panel As Panel = DirectCast(sender, Panel)
+            Dim snapPosition As Integer = Math.Round(panel.Location.X / 160) * 160
 
+            ' Ensure snap position is within bounds
+            If snapPosition < 0 Then
+                snapPosition = 0
+            ElseIf snapPosition + panel.Width > panel.Parent.Width Then
+                snapPosition = panel.Parent.Width - panel.Width
+            End If
 
+            panel.Location = New Point(snapPosition, panel.Location.Y)
+
+            ' Rearrange other panels if needed
+            RearrangePanels(panel.Parent, panel)
+        End If
+    End Sub
+
+    Private Sub RearrangePanels(container As Panel, movedPanel As Panel)
+        ' Get all panels in the container
+        Dim panels As New List(Of Panel)
+        For Each ctrl As Control In container.Controls
+            If TypeOf ctrl Is Panel Then
+                panels.Add(DirectCast(ctrl, Panel))
+            End If
+        Next
+
+        ' Sort panels by X position
+        panels.Sort(Function(a, b) a.Location.X.CompareTo(b.Location.X))
+
+        ' Reposition panels to prevent overlap
+        For i As Integer = 0 To panels.Count - 1
+            Dim newX As Integer = 10 + (i * 160)
+            panels(i).Location = New Point(newX, panels(i).Location.Y)
+        Next
+    End Sub
 
     Private lblSelected As Label = Nothing
 
-    Private Sub Label_Click(sender As Object, e As EventArgs) Handles lblDur1.Click, lblDur6.Click, lblDur2.Click, lblDur5.Click, lblDur4.Click, lblDur3.Click, lblOrder6.Click, lblOrder5.Click, lblOrder4.Click, lblOrder3.Click, lblOrder2.Click, lblSpot6.Click, lblOrder1.Click, lblSpot5.Click, lblSpot4.Click, lblSpot2.Click, lblSpot3.Click, lblSpot1.Click, lblTripName1.Click
+    Private Sub Label_Click(sender As Object, e As EventArgs) Handles lblTripName1.Click
         Dim clickedLabel = DirectCast(sender, Label)
 
         If lblSelected IsNot Nothing Then
@@ -122,45 +180,39 @@ Public Class ModifyTour
         ' Highlight the new label
         lblSelected = DirectCast(sender, Label)
         lblSelected.BackColor = Color.LightBlue
-
-
-        If clickedLabel.Name.StartsWith("lblOrder") Then
-            TextBox1.Text = clickedLabel.Text
-        ElseIf clickedLabel.Name.StartsWith("lblSpot") Then
-            TextBox2.Text = clickedLabel.Text
-        ElseIf clickedLabel.Name.StartsWith("lblDur") Then
-            TextBox3.Text = clickedLabel.Text
-        ElseIf clickedLabel.Name.StartsWith("lblTripName") Then
-            TextBox4.Text = clickedLabel.Text
-        End If
-    End Sub
-
-    Private textboxLabelMapping As Dictionary(Of TextBox, Label)
-
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        ' Add more mappings for all 15 labels
-    End Sub
-
-
-
-
-
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' Get the total duration from all duration labels
-
-        ' Close the form
-        MessageBox.Show("Changes saved successfully!", "Success")
-        Me.Close()
-    End Sub
-
-    Private Sub btnModify1_Click(sender As Object, e As EventArgs) Handles btnModify1.Click
-        Panel1.Visible = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim MI As New MainInterface()
         MI.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btnModify1_Click(sender As Object, e As EventArgs) Handles btnModify1.Click
+        Dim result = GetDurationsAndTotal()
+        Dim durations = result.Item1
+        Dim total = result.Item2
+        Dim guidList = result.Item3
+
+        If total > 6 Then
+            MessageBox.Show("Maximum time is 6 hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Dim stopDictionary As Dictionary(Of String, StopDetails) = _trips.Stops.ToDictionary(Function(s) s.guid, Function(s) s)
+            Dim reorganizedStops As New List(Of StopDetails)
+            For Each guid In guidList
+                If stopDictionary.ContainsKey(guid) Then
+                    reorganizedStops.Add(stopDictionary(guid))
+                End If
+            Next
+            _trips.Stops = reorganizedStops
+
+            _trips.TotalDuration = 6
+            For i As Integer = 0 To _trips.Stops.Count - 1
+                _trips.Stops(i).Duration = durations(i)
+            Next
+            RaiseEvent Confirm(_trips)
+            Close()
+            MessageBox.Show("Successfully Saved.")
+        End If
     End Sub
 End Class

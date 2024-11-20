@@ -1,21 +1,4 @@
-﻿Imports TimebusB2.CreateTour
-Imports TimebusB2.MainInterface
-Imports TimebusB2.TripOK
-
-
-
-
-Public Class ExistingTrip
-
-
-
-
-
-
-
-
-
-
+﻿Public Class ExistingTrip
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ex1 As New ExistingConfirmation()
         ex1.Label3.Text = ToolStripStatusLabel1.Text

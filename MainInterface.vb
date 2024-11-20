@@ -1,40 +1,32 @@
 ﻿Public Class MainInterface
 
+    Public trips As New List(Of Trip)
 
     Private Sub btnCreateTour_Click(sender As Object, e As EventArgs) Handles btnCreateTour.Click
         Me.Hide()
         Dim CreateTour As New CreateTour()
+        AddHandler CreateTour.Confirm, AddressOf AddTrip
         CreateTour.Show()
-
+    End Sub
+    Private Sub AddTrip(trip As Trip)
+        Show()
+        trips.Add(trip)
     End Sub
 
     Private Sub btnModifyTour_Click(sender As Object, e As EventArgs) Handles btnModifyTour.Click
-        Dim Modify As New ModifyTour()
-        Modify.Show()
-        Me.Hide()
+        Dim selectTour As New SelectTour(trips, True, False)
+        AddHandler selectTour.Confirm, AddressOf UpdateTrip
+        selectTour.Show()
+        Hide()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
+    Private Sub UpdateTrip(newTrip As Trip)
+        Dim index As Integer = trips.FindIndex(Function(t) t.guid = newTrip.guid)
+        If index >= 0 Then
+            trips(index) = newTrip
+        End If
+        Show()
     End Sub
-
-    Private Sub MainInterface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Public Class StopDetails
-        Public Property LocationName As String
-        Public Property Duration As Double
-        Public Property Order As Integer
-        Public Property Button As Button
-
-        ' Constructor to initialize all properties
-        Public Sub New(locationName As String, duration As Double, order As Integer)
-            Me.LocationName = locationName
-            Me.Duration = duration
-            Me.Order = order
-        End Sub
-    End Class
 
     Private Sub btnCopyTour_Click(sender As Object, e As EventArgs) Handles btnCopyTour.Click
         Dim CopyTour As New ExistingTrip()
@@ -49,13 +41,18 @@
                 frm.Close() ' Close all forms except the current form
             End If
         Next
-
         Application.Exit()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim Visitor As New VisitorView()
-        Visitor.Show()
-        Me.Hide()
+        Dim selectTour As New SelectTour(trips, False, False)
+        selectTour.Show()
+        Hide()
+    End Sub
+
+    Private Sub PilotBtn_Click(sender As Object, e As EventArgs) Handles PilotBtn.Click
+        Dim selectTour As New SelectTour(trips, False, True)
+        selectTour.Show()
+        Hide()
     End Sub
 End Class

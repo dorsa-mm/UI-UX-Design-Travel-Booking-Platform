@@ -1,18 +1,34 @@
-﻿Imports System.ComponentModel
-Imports System.Transactions
-Imports TimebusB2.MainInterface
+﻿Public Class CreateTour
+    Public Event Confirm(trip As Trip)
 
-Public Class CreateTour
+    Private countryDetails As New Dictionary(Of String, CountryInfo) From {
+{"Nigeria", New CountryInfo("Nigeria, the most populous country in Africa, is a vibrant nation known for its diverse cultures, languages, and economic potential.", My.Resources.Nigeria, "Nigeria, the most populous country in Africa, is a vibrant nation with over 250 ethnic groups and a rich cultural heritage. The country is a leading oil producer and has one of the largest economies on the continent. Its dynamic cities, such as Lagos and Abuja, serve as major hubs for commerce and innovation.")},
+{"Egypt", New CountryInfo("Egypt, a country linking northeast Africa with the Middle East, is known for its ancient civilization and iconic monuments like the Pyramids of Giza.", My.Resources.Egypt, "Egypt, often called the 'Gift of the Nile,' is famous for its ancient pharaohs and historical landmarks, including the Sphinx and Luxor temples. It is a cultural and political powerhouse in the Arab world. Cairo, its capital, is a bustling metropolis blending ancient history with modern vibrancy.")},
+{"South Africa", New CountryInfo("South Africa, located at the southern tip of Africa, is a country renowned for its diverse landscapes, wildlife, and cultural heritage.", My.Resources.SouthAfrica, "South Africa is famously known as the 'Rainbow Nation' due to its multicultural society and rich history. The country boasts incredible biodiversity, with attractions like Kruger National Park and Table Mountain. It has a complex past but is celebrated for its transition to democracy and iconic leaders like Nelson Mandela.")},
+{"Kenya", New CountryInfo("Kenya, located in East Africa, is renowned for its breathtaking landscapes, wildlife safaris, and vibrant cultural traditions.", My.Resources.Kenya, "Kenya is home to world-famous national parks such as Maasai Mara, offering spectacular wildlife experiences. The country is also a hub for long-distance runners, producing some of the world’s best athletes. Nairobi, the capital, is a dynamic city blending modernity with traditional culture.")},
+{"Ghana", New CountryInfo("Ghana, a West African nation, is known for its rich history, gold resources, and vibrant cultural traditions.", My.Resources.Ghana, "Ghana, formerly known as the Gold Coast, was the first African country to gain independence from colonial rule in 1957. It is celebrated for its warm hospitality, historical sites like Cape Coast Castle, and beautiful beaches. Accra, the capital city, is a thriving center of art, music, and entrepreneurship.")},
+{"China", New CountryInfo("China, the world's most populous country, is a global powerhouse known for its rich history, culture, and rapid economic growth.", My.Resources.China, "China is one of the world's oldest civilizations, with landmarks like the Great Wall, Forbidden City, and Terracotta Army. It has undergone significant modernization and is now the second-largest economy globally. The country also boasts diverse natural landscapes, from the Himalayas to the Yangtze River.")},
+{"India", New CountryInfo("India, the second-most populous country in the world, is known for its rich cultural heritage, diverse traditions, and growing economy.", My.Resources.India, "India is home to some of the world's oldest civilizations and iconic landmarks such as the Taj Mahal. The country is a global leader in technology, cinema, and spirituality. Its vibrant festivals like Diwali and Holi showcase the unity in diversity of its 1.4 billion people.")},
+{"Japan", New CountryInfo("Japan, an island nation in East Asia, is renowned for its technological advancements, traditional culture, and natural beauty.", My.Resources.Japan, "Japan is a land of contrasts, blending ancient traditions such as tea ceremonies and samurai heritage with cutting-edge technology. Iconic landmarks like Mount Fuji and Kyoto’s temples attract millions of tourists annually. Tokyo, its capital, is one of the world's most bustling and innovative cities.")},
+{"South Korea", New CountryInfo("South Korea, located in East Asia, is a dynamic country known for its cultural exports, technological innovations, and scenic landscapes.", My.Resources.SouthKorea, "South Korea has gained global fame through K-pop, Korean dramas, and its cuisine, including kimchi and bulgogi. The country is a leader in electronics and automotive industries, with brands like Samsung and Hyundai. Seoul, its capital, is a vibrant metropolis rich in history and modernity.")},
+{"Indonesia", New CountryInfo("Indonesia, the largest archipelago in the world, is known for its diverse cultures, stunning landscapes, and rich biodiversity.", My.Resources.Indonesia, "Indonesia spans over 17,000 islands, with Bali being a world-famous tourist destination. It is home to diverse ecosystems, including tropical rainforests and endangered species like orangutans. The country has a vibrant culture influenced by Hindu, Buddhist, Islamic, and indigenous traditions.")},
+{"France", New CountryInfo("France, located in Western Europe, is famed for its art, history, cuisine, and iconic landmarks like the Eiffel Tower.", My.Resources.France, "France is the world's most visited country, renowned for its romantic charm and culinary excellence. The country has a rich history reflected in landmarks like Versailles and medieval towns. Paris, its capital, is a global center for fashion, art, and culture.")},
+{"Germany", New CountryInfo("Germany, a central European country, is known for its innovation, rich history, and picturesque landscapes.", My.Resources.Germany, "Germany is Europe’s largest economy, renowned for its engineering prowess and brands like BMW and Siemens. Its history spans from the Holy Roman Empire to modern reunification. Visitors flock to landmarks like the Brandenburg Gate and Bavaria's fairy-tale castles.")},
+{"Italy", New CountryInfo("Italy, a southern European country, is celebrated for its art, architecture, cuisine, and historical heritage.", My.Resources.Italy, "Italy is the birthplace of the Renaissance, with iconic cities like Florence, Rome, and Venice. Its world-famous cuisine includes pizza, pasta, and gelato. Historical sites such as the Colosseum and Vatican City draw millions of tourists annually.")},
+{"Spain", New CountryInfo("Spain, located on the Iberian Peninsula, is renowned for its vibrant culture, historical landmarks, and Mediterranean lifestyle.", My.Resources.Spain, "Spain is famous for flamenco, bullfighting, and its rich culinary traditions, including tapas and paella. Its cities, like Barcelona and Madrid, blend modern innovation with historical charm. Spain’s landscapes range from sunny beaches to the Pyrenees mountains.")},
+{"United Kingdom", New CountryInfo("The United Kingdom, comprising England, Scotland, Wales, and Northern Ireland, is known for its historical influence, culture, and institutions.", My.Resources.UnitedKingdom, "The UK has a rich history, from medieval castles to the Industrial Revolution. London, its capital, is a global hub for finance, arts, and culture. Iconic landmarks like Stonehenge, Edinburgh Castle, and Big Ben attract millions of visitors yearly.")},
+{"United States", New CountryInfo("The United States of America, commonly referred to as the USA, is a federal republic consisting of 50 states, a federal district and several territories, with a diverse landscape, culture and economy.", My.Resources.UnitedStates, "The United States of America, commonly referred to as the USA, is a federal republic consisting of 50 states, a federal district and several territories. Known for its diverse culture, vibrant cities, stunning natural landscapes and influential economy, the country attracts millions of visitors and immigrants each year.")},
+{"Canada", New CountryInfo("Canada, the second-largest country in the world by land area, is known for its natural beauty, multicultural society, and high quality of life.", My.Resources.Canada, "Canada boasts stunning landscapes, including the Rocky Mountains, Niagara Falls, and vast forests. It is a bilingual nation, with English and French as official languages. Cities like Toronto and Vancouver are renowned for their livability and cultural diversity.")},
+{"Mexico", New CountryInfo("Mexico, a country in North America, is celebrated for its rich history, vibrant culture, and diverse landscapes.", My.Resources.Mexico, "Mexico’s heritage includes ancient civilizations like the Aztecs and Mayans, leaving behind landmarks like Chichen Itza. The country is known for its lively festivals, such as Día de los Muertos, and world-famous cuisine. Its stunning beaches, such as those in Cancún, attract millions of tourists annually.")},
+{"Brazil", New CountryInfo("Brazil, the largest country in South America, is known for its vibrant culture, Amazon rainforest, and world-famous Carnival festival.", My.Resources.Brazil, "Brazil is home to diverse ecosystems, including the Amazon, the world's largest rainforest. The country is a powerhouse in soccer, producing legends like Pelé and Neymar. Rio de Janeiro’s Christ the Redeemer statue and Copacabana Beach are iconic global landmarks.")},
+{"Argentina", New CountryInfo("Argentina, the second-largest country in South America, is known for its rich culture, tango music, and diverse landscapes.", My.Resources.Argentina, "Argentina is famous for its passion for football and producing players like Lionel Messi. The country boasts stunning natural wonders such as Iguazu Falls and the Andes Mountains. Buenos Aires, its capital, is a hub of European-inspired architecture and vibrant culture.")},
+{"Colombia", New CountryInfo("Colombia, located in South America, is known for its coffee, diverse ecosystems, and vibrant culture.", My.Resources.Colombia, "Colombia is the world's leading exporter of quality coffee beans. Its natural landscapes include the Andes, Amazon rainforest, and Caribbean beaches. The country’s music, like cumbia and vallenato, reflects its rich cultural heritage.")},
+{"Chile", New CountryInfo("Chile, a long and narrow country in South America, is known for its dramatic landscapes, from the Atacama Desert to Patagonia.", My.Resources.Chile, "Chile is a long, narrow country in South America, bordered by the Andes Mountains and the Pacific Ocean, known for its diverse geography, rich cultural heritage and prosperous economy.")},
+    {"Australia", New CountryInfo("Australia is a vast island continent and country in the Southern Hemisphere, characterized by its diverse wildlife, iconic cities and expansive Outback desert.", My.Resources.AustraliaCity, "Australia is famous for its unique and diverse wildlife, including kangaroos, koalas and wombats.The country has a strong economy, driven primarily by service industries, mining and agriculture. Australia's indigenous Aboriginal culture is one of the oldest continuing cultures on Earth.")},
+    {"New Zealand", New CountryInfo("New Zealand is an island nation in the southwestern Pacific Ocean, recognized for its breathtaking landscapes, diverse wildlife and rich cultural heritage.", My.Resources.NewZealand, "New Zealand's stunning landscapes include mountains, fjords, coastlines and geothermal wonders. The country is a popular destination for outdoor activities like hiking, skiing and bungee jumping. New Zealand has a strong focus on environmental conservation and sustainability.")},
+    {"Antarctica", New CountryInfo("Antarctica is the Earth's southernmost continent, covered by a thick ice sheet, known for its extreme climate, unique scientific research stations and protected wildlife.", My.Resources.AntarcticaCity, "Antarctica has no permanent residents, only temporary scientists and researchers at various stations. The Antarctic Treaty protects the continent's environment and ecosystem. Antarctica holds about 70% of the world's fresh water in its massive ice sheets.")}
+    }
 
-    Public Class CountryInfo
-        Public Property Description As String
-        Public Property Image As Image
-
-        Public Sub New(description As String, image As Image)
-            Me.Description = description
-            Me.Image = image
-        End Sub
-    End Class
     Private Sub BtnTourSet_Click(sender As Object, e As EventArgs) Handles btnTourSet.Click
         Dim tourname As String = txtTourName.Text
         If tourname = "" Then
@@ -21,11 +37,8 @@ Public Class CreateTour
             lblTourName.Text = tourname
             panelAgeSelection.Visible = True
             panelTourStatus.Visible = True
-
         End If
     End Sub
-
-
 
     Private Sub btnPast_Click(sender As Object, e As EventArgs) Handles btnPast.Click
         Panel1.Visible = True
@@ -42,7 +55,6 @@ Public Class CreateTour
         Else
             lblTimeLine.Text = EraName
             panelContinent.Visible = True
-
         End If
     End Sub
     Private Sub UpdateMap(continent As String)
@@ -132,11 +144,6 @@ Public Class CreateTour
 
     End Sub
 
-    Private countryDetails As New Dictionary(Of String, CountryInfo) From {
-    {"United States", New CountryInfo("US is a country in North America...", My.Resources.NY)},
-    {"Canada", New CountryInfo("Canada is a country in North America...", My.Resources.cn_tower)},
-    {"Mexico", New CountryInfo("Mexico Papi is a country in North America...", My.Resources.Mexico)}
-}
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         Panel3.Visible = True
@@ -324,10 +331,6 @@ Public Class CreateTour
         Next
     End Sub
 
-
-
-
-
     Dim stopDetailsList As New List(Of StopDetails)
 
     Private Sub btnAdder_Click(sender As Object, e As EventArgs) Handles btnAdder.Click
@@ -356,8 +359,11 @@ Public Class CreateTour
             Return
         End If
 
+        Dim countryInfo As CountryInfo = countryDetails(selectedCountry)
+
         ' Create a new StopDetails instance
-        Dim stopDetails As New StopDetails(selectedCountry, duration, order)
+        Dim stopDetails As New StopDetails(selectedCountry, duration, order, countryInfo)
+        stopDetails.Year = txtTimeLine.Text
 
         ' Create a new button for the stop
         Dim newButton As New Button With {
@@ -456,40 +462,8 @@ Public Class CreateTour
         End If
     End Sub
 
-    Public Class Trip
-        Public Property Stops As List(Of StopDetails)  ' List of stops
-        Public Property TotalDuration As Double  ' Total duration
-        Public Property TripName As String  ' Name of the trip
-
-        Public Sub New()
-            Stops = New List(Of StopDetails)()
-            TotalDuration = 0.0
-        End Sub
-    End Class
-
-
-
-
-
-
-    Private Sub lbl2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtDuration_TextChanged(sender As Object, e As EventArgs) Handles txtDuration.TextChanged
-
-    End Sub
-
     Private Sub CreateTour_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         panelCreateTour.Visible = True
-    End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
-
     End Sub
 
     Private Sub btnConfirmTrip_Click(sender As Object, e As EventArgs) Handles btnConfirmTrip.Click
@@ -506,12 +480,12 @@ Public Class CreateTour
 
         ' Pass the Trip object to the new form
         Dim tripSummaryForm As New TripOK(trip)
+        AddHandler tripSummaryForm.Confirm, AddressOf OnConfirm
         tripSummaryForm.Show() ' Show the new form
+    End Sub
 
-
-
-
-
+    Private Sub OnConfirm(trip As Trip)
+        RaiseEvent Confirm(trip)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
