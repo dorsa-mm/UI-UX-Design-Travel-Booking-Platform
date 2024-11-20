@@ -98,7 +98,7 @@
     Private Sub Panel_MouseDown(sender As Object, e As MouseEventArgs)
         Dim panel As DraggablePanel = DirectCast(sender, DraggablePanel)
 
-        If e.Button = MouseButtons.Left AndAlso panel.CanDrag Then
+        If e.Button = MouseButtons.Left Then
             isDragging = True
             draggedPanel = DirectCast(sender, Panel)
             startPoint = New Point(e.X, e.Y)
