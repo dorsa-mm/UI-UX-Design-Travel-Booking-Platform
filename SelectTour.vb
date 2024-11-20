@@ -46,7 +46,7 @@
             Dim ModifyTour As New ModifyTour(trip)
             AddHandler ModifyTour.Confirm, AddressOf Modified
             ModifyTour.Show()
-        ElseIf _isModify And _isPilot Then
+        ElseIf _isPilot Then
             Dim Cockpit As New CockpitForm(trip)
             AddHandler Cockpit.TourEnd, AddressOf EndedTour
             Cockpit.Show()

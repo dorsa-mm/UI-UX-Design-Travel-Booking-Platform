@@ -42,6 +42,7 @@ Partial Class SelectTour
         Me.ClientSize = New System.Drawing.Size(815, 583)
         Me.Controls.Add(Me.Label1)
         Me.Name = "SelectTour"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SelectTour"
         Me.ResumeLayout(False)
         Me.PerformLayout()
