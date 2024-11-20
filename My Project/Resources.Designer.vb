@@ -66,6 +66,9 @@ Namespace My.Resources
         Friend ReadOnly Property africa() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("africa", resourceCulture)
+        Friend ReadOnly Property blue_down() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("blue_down", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -76,6 +79,9 @@ Namespace My.Resources
         Friend ReadOnly Property antarctica() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("antarctica", resourceCulture)
+        Friend ReadOnly Property brightness() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("brightness", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -86,6 +92,9 @@ Namespace My.Resources
         Friend ReadOnly Property asia() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("asia", resourceCulture)
+        Friend ReadOnly Property camera() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("camera", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -96,6 +105,9 @@ Namespace My.Resources
         Friend ReadOnly Property australia() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("australia", resourceCulture)
+        Friend ReadOnly Property green_up() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("green_up", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -106,6 +118,9 @@ Namespace My.Resources
         Friend ReadOnly Property cn_tower() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("cn-tower", resourceCulture)
+        Friend ReadOnly Property sound() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("sound", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -116,6 +131,9 @@ Namespace My.Resources
         Friend ReadOnly Property europe() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("europe", resourceCulture)
+        Friend ReadOnly Property temperature() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("temperature", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -126,6 +144,9 @@ Namespace My.Resources
         Friend ReadOnly Property Mexico() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Mexico", resourceCulture)
+        Friend ReadOnly Property zoom_in() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("zoom_in", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -156,6 +177,9 @@ Namespace My.Resources
         Friend ReadOnly Property south_america_continent_map() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("south-america-continent-map", resourceCulture)
+        Friend ReadOnly Property zoom_out() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("zoom_out", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
