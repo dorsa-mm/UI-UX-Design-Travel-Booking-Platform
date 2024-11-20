@@ -80,7 +80,7 @@ Public Class ModifyTour
 
     Private Sub InitializeTrips()
         ' Populate initial trip data (Example: hard-coded for now)
-        lblTripName1.Text = "Trip to Beach"
+        lblTripName1.Text = "Historical Landmarks"
         lblOrder1.Text = "1"
         lblOrder2.Text = "2"
         lblOrder3.Text = "3"

@@ -58,6 +58,7 @@ Partial Class ModifyTour
         TextBox1 = New TextBox()
         Label1 = New Label()
         Button2 = New Button()
+        Label9 = New Label()
         GroupBox1.SuspendLayout()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -88,7 +89,7 @@ Partial Class ModifyTour
         GroupBox1.Controls.Add(lblSpot3)
         GroupBox1.Controls.Add(lblSpot1)
         GroupBox1.Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        GroupBox1.Location = New Point(21, 60)
+        GroupBox1.Location = New Point(12, 131)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(744, 162)
         GroupBox1.TabIndex = 0
@@ -313,7 +314,7 @@ Partial Class ModifyTour
         Panel1.Controls.Add(TextBox3)
         Panel1.Controls.Add(TextBox2)
         Panel1.Controls.Add(TextBox1)
-        Panel1.Location = New Point(70, 227)
+        Panel1.Location = New Point(138, 299)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(392, 177)
         Panel1.TabIndex = 2
@@ -396,7 +397,7 @@ Partial Class ModifyTour
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(213, 29)
+        Label1.Location = New Point(257, 13)
         Label1.Name = "Label1"
         Label1.Size = New Size(159, 19)
         Label1.TabIndex = 3
@@ -411,11 +412,22 @@ Partial Class ModifyTour
         Button2.Text = "Back to Home"
         Button2.UseVisualStyleBackColor = True
         ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Label9.Location = New Point(12, 64)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(488, 42)
+        Label9.TabIndex = 5
+        Label9.Text = "Instructions: To modify your trip, Click on the Edit Button first And then" & vbCrLf & " click on Order/Spot/Duration you want to change and Type in" & vbCrLf & "New Information and Click Change to Modify. "
+        ' 
         ' ModifyTour
         ' 
         AutoScaleDimensions = New SizeF(7F, 13F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(777, 416)
+        ClientSize = New Size(777, 488)
+        Controls.Add(Label9)
         Controls.Add(Button2)
         Controls.Add(Label1)
         Controls.Add(Panel1)
@@ -468,4 +480,5 @@ Partial Class ModifyTour
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class

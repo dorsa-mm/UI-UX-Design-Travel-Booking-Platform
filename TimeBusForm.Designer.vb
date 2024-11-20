@@ -22,15 +22,56 @@ Partial Class TimeBusForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Label1 = New Label()
+        Button1 = New Button()
+        Label2 = New Label()
         SuspendLayout()
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(85, 9)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(364, 33)
+        Label1.TabIndex = 1
+        Label1.Text = "Welcome to Timebus Inc."
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(95, 132)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(339, 23)
+        Button1.TabIndex = 2
+        Button1.Text = "Start the program"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(41, 100)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(531, 14)
+        Label2.TabIndex = 3
+        Label2.Text = "By Clicking on this button, You agree to the terms and conditions of TimeBus Inc."
         ' 
         ' TimeBusForm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7F, 14F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(584, 361)
+        ClientSize = New Size(584, 180)
+        Controls.Add(Label2)
+        Controls.Add(Button1)
+        Controls.Add(Label1)
+        Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Name = "TimeBusForm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "TimeBus.B2"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label2 As Label
 End Class

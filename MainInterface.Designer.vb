@@ -27,6 +27,7 @@ Partial Class MainInterface
         btnModifyTour = New Button()
         btnCopyTour = New Button()
         btnCloseAll = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -78,11 +79,21 @@ Partial Class MainInterface
         btnCloseAll.Text = "Close Program"
         btnCloseAll.UseVisualStyleBackColor = True
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(53, 111)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(161, 23)
+        Button1.TabIndex = 5
+        Button1.Text = "Experience As a Visitor"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' MainInterface
         ' 
         AutoScaleDimensions = New SizeF(7F, 13F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(288, 313)
+        Controls.Add(Button1)
         Controls.Add(btnCloseAll)
         Controls.Add(btnCopyTour)
         Controls.Add(btnModifyTour)
@@ -101,5 +112,6 @@ Partial Class MainInterface
     Friend WithEvents btnModifyTour As Button
     Friend WithEvents btnCopyTour As Button
     Friend WithEvents btnCloseAll As Button
+    Friend WithEvents Button1 As Button
 
 End Class
