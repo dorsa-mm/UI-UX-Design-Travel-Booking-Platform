@@ -49,6 +49,7 @@
         ElseIf _isPilot Then
             Dim Cockpit As New CockpitForm(trip)
             AddHandler Cockpit.TourEnd, AddressOf EndedTour
+            AddHandler Cockpit.Emergency, AddressOf EndedTour
             Cockpit.Show()
         Else
             Dim Visitor As New VisitorView(trip)

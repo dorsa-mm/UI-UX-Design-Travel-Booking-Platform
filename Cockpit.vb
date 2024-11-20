@@ -11,6 +11,7 @@
     Private originalHeight
     Private pause = False
     Private remainingTime
+    Public Event Emergency()
     Public Sub New(trip As Trip)
 
         ' This call is required by the designer.
@@ -155,9 +156,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim MI As New MainInterface()
-        MI.Show()
-        Me.Close()
-
+        RaiseEvent Emergency()
+        Close()
     End Sub
 End Class
