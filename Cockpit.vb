@@ -153,4 +153,11 @@
         currentIndex = (currentIndex + 1)
         ShowCurrentTrip()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim MI As New MainInterface()
+        MI.Show()
+        Me.Close()
+
+    End Sub
 End Class

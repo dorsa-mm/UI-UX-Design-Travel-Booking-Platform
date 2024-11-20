@@ -158,7 +158,7 @@
 
     Private Sub UpdateTrip(trip As Trip)
         _trip = trip
-        slideTimer.Interval = 20000 * _trip.Stops(currentIndex).Duration
+        slideTimer.Interval = 30000 * _trip.Stops(currentIndex).Duration
         If remainingTime > 0 Then
             slideTimer.Interval = remainingTime
             remainingTime = 0
@@ -209,5 +209,15 @@
 
     Private Sub WindowBox_MouseUp(sender As Object, e As MouseEventArgs) Handles WindowBox.MouseUp
         isDragging = False
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim EM As New Emergency_Procedure()
+        EM.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub VisitorView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

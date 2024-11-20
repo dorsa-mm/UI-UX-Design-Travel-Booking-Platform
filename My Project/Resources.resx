@@ -130,8 +130,8 @@
   <data name="India" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\India.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="antarctica" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\antarctica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nigeria_lagos_Tayvay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nigeria_lagos_Tayvay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ghana-th-1024x589" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ghana-th-1024x589.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,9 +144,6 @@
   </data>
   <data name="UnitedKingdom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnitedKingdom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Egypt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Egypt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AustraliaCity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AustraliaCity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,11 +187,8 @@
   <data name="UnitedStates" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NY.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nigeria_lagos_Tayvay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nigeria_lagos_Tayvay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FZ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AntarcticaCity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AntarcticaCity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Irish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Irish.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,6 +201,9 @@
   </data>
   <data name="Germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Germany.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="antarctica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\antarctica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="China1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\China1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,17 +241,20 @@
   <data name="Canada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cn-tower.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RS.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="moonlanding3getty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moonlanding3getty.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Spain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AntarcticaCity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AntarcticaCity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Iguazu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iguazu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Japan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Japan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Brazil.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,6 +265,9 @@
   <data name="Japan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Japan1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="north-america-continent-map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\north-america-continent-map1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="India1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\India1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -274,8 +277,8 @@
   <data name="1960se" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1960se.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="north-america-continent-map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\north-america-continent-map1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="temperature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\temperature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="aroma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aroma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,8 +286,8 @@
   <data name="south-africa-in-pictures-most-beautiful-places-to-visit-camps-bay-beach" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\south-africa-in-pictures-most-beautiful-places-to-visit-camps-bay-beach.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="temperature" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\temperature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FZ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,10 +316,10 @@
   <data name="how-big-was-the-roman-empire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\how-big-was-the-roman-empire.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Japan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Japan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Egypt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Egypt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RS.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
