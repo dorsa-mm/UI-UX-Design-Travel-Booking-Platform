@@ -22,89 +22,101 @@ Partial Class MainInterface
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        btnCreateTour = New Button()
-        btnModifyTour = New Button()
-        btnCopyTour = New Button()
-        btnCloseAll = New Button()
-        Button1 = New Button()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Showcard Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(12, 7)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(259, 23)
-        Label1.TabIndex = 0
-        Label1.Text = "Welcome to Timebus Inc."
-        ' 
-        ' btnCreateTour
-        ' 
-        btnCreateTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        btnCreateTour.Location = New Point(53, 38)
-        btnCreateTour.Name = "btnCreateTour"
-        btnCreateTour.Size = New Size(161, 19)
-        btnCreateTour.TabIndex = 1
-        btnCreateTour.Text = "Create a tour"
-        btnCreateTour.UseVisualStyleBackColor = True
-        ' 
-        ' btnModifyTour
-        ' 
-        btnModifyTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        btnModifyTour.Location = New Point(53, 86)
-        btnModifyTour.Name = "btnModifyTour"
-        btnModifyTour.Size = New Size(161, 19)
-        btnModifyTour.TabIndex = 2
-        btnModifyTour.Text = "Modify a Tour"
-        btnModifyTour.UseVisualStyleBackColor = True
-        ' 
-        ' btnCopyTour
-        ' 
-        btnCopyTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        btnCopyTour.Location = New Point(53, 62)
-        btnCopyTour.Name = "btnCopyTour"
-        btnCopyTour.Size = New Size(161, 19)
-        btnCopyTour.TabIndex = 3
-        btnCopyTour.Text = "Copy from Existing tour"
-        btnCopyTour.UseVisualStyleBackColor = True
-        ' 
-        ' btnCloseAll
-        ' 
-        btnCloseAll.Location = New Point(53, 272)
-        btnCloseAll.Name = "btnCloseAll"
-        btnCloseAll.Size = New Size(161, 19)
-        btnCloseAll.TabIndex = 4
-        btnCloseAll.Text = "Close Program"
-        btnCloseAll.UseVisualStyleBackColor = True
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(53, 111)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(161, 23)
-        Button1.TabIndex = 5
-        Button1.Text = "Experience As a Visitor"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' MainInterface
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 13F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(288, 313)
-        Controls.Add(Button1)
-        Controls.Add(btnCloseAll)
-        Controls.Add(btnCopyTour)
-        Controls.Add(btnModifyTour)
-        Controls.Add(btnCreateTour)
-        Controls.Add(Label1)
-        Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Name = "MainInterface"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "HomePage"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnCreateTour = New System.Windows.Forms.Button()
+        Me.btnModifyTour = New System.Windows.Forms.Button()
+        Me.btnCopyTour = New System.Windows.Forms.Button()
+        Me.btnCloseAll = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PilotBtn = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(78, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(324, 30)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Welcome to Timebus Inc."
+        '
+        'btnCreateTour
+        '
+        Me.btnCreateTour.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCreateTour.Location = New System.Drawing.Point(158, 58)
+        Me.btnCreateTour.Name = "btnCreateTour"
+        Me.btnCreateTour.Size = New System.Drawing.Size(161, 42)
+        Me.btnCreateTour.TabIndex = 1
+        Me.btnCreateTour.Text = "Create a tour"
+        Me.btnCreateTour.UseVisualStyleBackColor = True
+        '
+        'btnModifyTour
+        '
+        Me.btnModifyTour.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnModifyTour.Location = New System.Drawing.Point(158, 154)
+        Me.btnModifyTour.Name = "btnModifyTour"
+        Me.btnModifyTour.Size = New System.Drawing.Size(161, 42)
+        Me.btnModifyTour.TabIndex = 2
+        Me.btnModifyTour.Text = "Modify a Tour"
+        Me.btnModifyTour.UseVisualStyleBackColor = True
+        '
+        'btnCopyTour
+        '
+        Me.btnCopyTour.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCopyTour.Location = New System.Drawing.Point(158, 106)
+        Me.btnCopyTour.Name = "btnCopyTour"
+        Me.btnCopyTour.Size = New System.Drawing.Size(161, 42)
+        Me.btnCopyTour.TabIndex = 3
+        Me.btnCopyTour.Text = "Copy from Existing tour"
+        Me.btnCopyTour.UseVisualStyleBackColor = True
+        '
+        'btnCloseAll
+        '
+        Me.btnCloseAll.Location = New System.Drawing.Point(158, 298)
+        Me.btnCloseAll.Name = "btnCloseAll"
+        Me.btnCloseAll.Size = New System.Drawing.Size(161, 42)
+        Me.btnCloseAll.TabIndex = 4
+        Me.btnCloseAll.Text = "Close Program"
+        Me.btnCloseAll.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(158, 202)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(161, 42)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Experience As a Visitor"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'PilotBtn
+        '
+        Me.PilotBtn.Location = New System.Drawing.Point(158, 250)
+        Me.PilotBtn.Name = "PilotBtn"
+        Me.PilotBtn.Size = New System.Drawing.Size(161, 42)
+        Me.PilotBtn.TabIndex = 6
+        Me.PilotBtn.Text = "Experience As a Pilot"
+        Me.PilotBtn.UseVisualStyleBackColor = True
+        '
+        'MainInterface
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(470, 432)
+        Me.Controls.Add(Me.PilotBtn)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnCloseAll)
+        Me.Controls.Add(Me.btnCopyTour)
+        Me.Controls.Add(Me.btnModifyTour)
+        Me.Controls.Add(Me.btnCreateTour)
+        Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Name = "MainInterface"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "HomePage"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Label1 As Label
@@ -113,5 +125,5 @@ Partial Class MainInterface
     Friend WithEvents btnCopyTour As Button
     Friend WithEvents btnCloseAll As Button
     Friend WithEvents Button1 As Button
-
+    Friend WithEvents PilotBtn As Button
 End Class

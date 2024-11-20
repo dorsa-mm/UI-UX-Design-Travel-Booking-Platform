@@ -22,76 +22,77 @@ Partial Class TripOK
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        lblTripName = New Label()
-        ListBoxStops = New ListBox()
-        btnModifyTrip = New Button()
-        Label1 = New Label()
-        Label2 = New Label()
-        SuspendLayout()
-        ' 
-        ' lblTripName
-        ' 
-        lblTripName.AutoSize = True
-        lblTripName.Location = New Point(111, 58)
-        lblTripName.Name = "lblTripName"
-        lblTripName.Size = New Size(48, 14)
-        lblTripName.TabIndex = 0
-        lblTripName.Text = "Label1"
-        ' 
-        ' ListBoxStops
-        ' 
-        ListBoxStops.FormattingEnabled = True
-        ListBoxStops.ItemHeight = 14
-        ListBoxStops.Location = New Point(30, 75)
-        ListBoxStops.Name = "ListBoxStops"
-        ListBoxStops.Size = New Size(163, 158)
-        ListBoxStops.TabIndex = 1
-        ' 
-        ' btnModifyTrip
-        ' 
-        btnModifyTrip.Location = New Point(125, 235)
-        btnModifyTrip.Name = "btnModifyTrip"
-        btnModifyTrip.Size = New Size(68, 22)
-        btnModifyTrip.TabIndex = 2
-        btnModifyTrip.Text = "OK"
-        btnModifyTrip.UseVisualStyleBackColor = True
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.ForeColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Label1.Location = New Point(30, 9)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(156, 22)
-        Label1.TabIndex = 3
-        Label1.Text = "Trip Confirmed!"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(30, 58)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(76, 14)
-        Label2.TabIndex = 4
-        Label2.Text = "Tour Name:"
-        ' 
-        ' TripOK
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 14F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(231, 269)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
-        Controls.Add(btnModifyTrip)
-        Controls.Add(ListBoxStops)
-        Controls.Add(lblTripName)
-        Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Name = "TripOK"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "TripOK"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.lblTripName = New System.Windows.Forms.Label()
+        Me.ListBoxStops = New System.Windows.Forms.ListBox()
+        Me.btnModifyTrip = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'lblTripName
+        '
+        Me.lblTripName.AutoSize = True
+        Me.lblTripName.Location = New System.Drawing.Point(132, 58)
+        Me.lblTripName.Name = "lblTripName"
+        Me.lblTripName.Size = New System.Drawing.Size(61, 18)
+        Me.lblTripName.TabIndex = 0
+        Me.lblTripName.Text = "Label1"
+        '
+        'ListBoxStops
+        '
+        Me.ListBoxStops.FormattingEnabled = True
+        Me.ListBoxStops.ItemHeight = 18
+        Me.ListBoxStops.Location = New System.Drawing.Point(30, 81)
+        Me.ListBoxStops.Name = "ListBoxStops"
+        Me.ListBoxStops.Size = New System.Drawing.Size(380, 202)
+        Me.ListBoxStops.TabIndex = 1
+        '
+        'btnModifyTrip
+        '
+        Me.btnModifyTrip.Location = New System.Drawing.Point(342, 289)
+        Me.btnModifyTrip.Name = "btnModifyTrip"
+        Me.btnModifyTrip.Size = New System.Drawing.Size(68, 27)
+        Me.btnModifyTrip.TabIndex = 2
+        Me.btnModifyTrip.Text = "OK"
+        Me.btnModifyTrip.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Snap ITC", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(30, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(198, 27)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Trip Confirmed!"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(30, 58)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Tour Name:"
+        '
+        'TripOK
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(445, 387)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnModifyTrip)
+        Me.Controls.Add(Me.ListBoxStops)
+        Me.Controls.Add(Me.lblTripName)
+        Me.Font = New System.Drawing.Font("Stencil", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Name = "TripOK"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "TripOK"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents lblTripName As Label
