@@ -1,5 +1,6 @@
 ﻿Public Class CreateTour
     Public Event Confirm(trip As Trip)
+    Public Event CloseCreate()
 
     Private countryDetails As New Dictionary(Of String, CountryInfo) From {
 {"Nigeria", New CountryInfo("Nigeria, the most populous country in Africa, is a vibrant nation known for its diverse cultures, languages, and economic potential.", My.Resources.Nigeria, "Nigeria, the most populous country in Africa, is a vibrant nation with over 250 ethnic groups and a rich cultural heritage. The country is a leading oil producer and has one of the largest economies on the continent. Its dynamic cities, such as Lagos and Abuja, serve as major hubs for commerce and innovation.")},
@@ -509,15 +510,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim MI As New MainInterface()
-        MI.Show()
-        Me.Close()
-        If MI.trips.Count = 0 Then
-            MI.PilotBtn.Enabled = False
-            MI.Button1.Enabled = False
-        Else
-            MI.Button1.Enabled = True
-            MI.PilotBtn.Enabled = True
-        End If
+        RaiseEvent CloseCreate()
+        Close()
     End Sub
 End Class

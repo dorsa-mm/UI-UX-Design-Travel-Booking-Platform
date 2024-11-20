@@ -2,16 +2,49 @@
 
     Public trips As New List(Of Trip)
 
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        If trips.Count = 0 Then
+            Button1.Enabled = False
+            PilotBtn.Enabled = False
+        Else
+            Button1.Enabled = True
+            PilotBtn.Enabled = True
+        End If
+    End Sub
 
     Private Sub btnCreateTour_Click(sender As Object, e As EventArgs) Handles btnCreateTour.Click
         Me.Hide()
         Dim CreateTour As New CreateTour()
         AddHandler CreateTour.Confirm, AddressOf AddTrip
+        AddHandler CreateTour.CloseCreate, AddressOf ClosedCreatedTour
         CreateTour.Show()
+    End Sub
+
+    Private Sub ClosedCreatedTour()
+        If trips.Count = 0 Then
+            Button1.Enabled = False
+            PilotBtn.Enabled = False
+        Else
+            Button1.Enabled = True
+            PilotBtn.Enabled = True
+        End If
+        Show()
     End Sub
     Private Sub AddTrip(trip As Trip)
         Show()
         trips.Add(trip)
+        If trips.Count = 0 Then
+            Button1.Enabled = False
+            PilotBtn.Enabled = False
+        Else
+            Button1.Enabled = True
+            PilotBtn.Enabled = True
+        End If
     End Sub
 
     Private Sub btnModifyTour_Click(sender As Object, e As EventArgs) Handles btnModifyTour.Click
@@ -27,6 +60,13 @@
             trips(index) = newTrip
         End If
         Show()
+        If trips.Count = 0 Then
+            Button1.Enabled = False
+            PilotBtn.Enabled = False
+        Else
+            Button1.Enabled = True
+            PilotBtn.Enabled = True
+        End If
     End Sub
 
     Private Sub btnCopyTour_Click(sender As Object, e As EventArgs) Handles btnCopyTour.Click
@@ -61,9 +101,12 @@
 
     Private Sub EndTour()
         Show()
-    End Sub
-
-    Private Sub MainInterface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        If trips.Count = 0 Then
+            Button1.Enabled = False
+            PilotBtn.Enabled = False
+        Else
+            Button1.Enabled = True
+            PilotBtn.Enabled = True
+        End If
     End Sub
 End Class
