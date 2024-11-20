@@ -22,566 +22,565 @@ Partial Class CreateTour
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.lblDesc = New System.Windows.Forms.Label()
-        Me.btnAdder = New System.Windows.Forms.Button()
-        Me.txtDuration = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.boxPlace = New System.Windows.Forms.PictureBox()
-        Me.lblPlaceName = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.mapBox = New System.Windows.Forms.PictureBox()
-        Me.panelContinent = New System.Windows.Forms.Panel()
-        Me.lblTimeLine = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnAntartica = New System.Windows.Forms.Button()
-        Me.btnAfrica = New System.Windows.Forms.Button()
-        Me.btnAsia = New System.Windows.Forms.Button()
-        Me.btnEurope = New System.Windows.Forms.Button()
-        Me.btnSouthAmerica = New System.Windows.Forms.Button()
-        Me.btnAustralia = New System.Windows.Forms.Button()
-        Me.btnNorthAmerica = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.panelAgeSelection = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnFuture = New System.Windows.Forms.Button()
-        Me.btnPast = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.txtTimeLine = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.panelTourStatus = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.panelBoxes = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.lblTourName = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.progressDuration = New System.Windows.Forms.ProgressBar()
-        Me.btnConfirmTrip = New System.Windows.Forms.Button()
-        Me.lblDurationstatus = New System.Windows.Forms.Label()
-        Me.panelCreateTour = New System.Windows.Forms.Panel()
-        Me.btnTourSet = New System.Windows.Forms.Button()
-        Me.txtTourName = New System.Windows.Forms.TextBox()
-        Me.lblTourNamePrompt = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel3.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.boxPlace, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.mapBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelContinent.SuspendLayout()
-        Me.panelAgeSelection.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.panelTourStatus.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.panelCreateTour.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel3.Controls.Add(Me.lblDesc)
-        Me.Panel3.Controls.Add(Me.btnAdder)
-        Me.Panel3.Controls.Add(Me.txtDuration)
-        Me.Panel3.Controls.Add(Me.NumericUpDown1)
-        Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.boxPlace)
-        Me.Panel3.Controls.Add(Me.lblPlaceName)
-        Me.Panel3.Controls.Add(Me.Label12)
-        Me.Panel3.Location = New System.Drawing.Point(689, 358)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(537, 268)
-        Me.Panel3.TabIndex = 17
-        Me.Panel3.Visible = False
-        '
-        'lblDesc
-        '
-        Me.lblDesc.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.lblDesc.Location = New System.Drawing.Point(13, 27)
-        Me.lblDesc.Name = "lblDesc"
-        Me.lblDesc.Size = New System.Drawing.Size(293, 117)
-        Me.lblDesc.TabIndex = 6
-        Me.lblDesc.Text = "Label7"
-        '
-        'btnAdder
-        '
-        Me.btnAdder.Location = New System.Drawing.Point(24, 211)
-        Me.btnAdder.Name = "btnAdder"
-        Me.btnAdder.Size = New System.Drawing.Size(179, 23)
-        Me.btnAdder.TabIndex = 5
-        Me.btnAdder.Text = "Add Visit"
-        Me.btnAdder.UseVisualStyleBackColor = True
-        '
-        'txtDuration
-        '
-        Me.txtDuration.Location = New System.Drawing.Point(148, 164)
-        Me.txtDuration.Name = "txtDuration"
-        Me.txtDuration.Size = New System.Drawing.Size(100, 24)
-        Me.txtDuration.TabIndex = 3
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(401, 165)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
-        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(43, 24)
-        Me.NumericUpDown1.TabIndex = 12
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(20, 167)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(122, 17)
-        Me.Label8.TabIndex = 2
-        Me.Label8.Text = "Visit Duration:"
-        '
-        'boxPlace
-        '
-        Me.boxPlace.Location = New System.Drawing.Point(315, 27)
-        Me.boxPlace.Name = "boxPlace"
-        Me.boxPlace.Size = New System.Drawing.Size(193, 116)
-        Me.boxPlace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.boxPlace.TabIndex = 1
-        Me.boxPlace.TabStop = False
-        '
-        'lblPlaceName
-        '
-        Me.lblPlaceName.AutoSize = True
-        Me.lblPlaceName.Location = New System.Drawing.Point(13, 10)
-        Me.lblPlaceName.Name = "lblPlaceName"
-        Me.lblPlaceName.Size = New System.Drawing.Size(56, 17)
-        Me.lblPlaceName.TabIndex = 0
-        Me.lblPlaceName.Text = "Label7"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(288, 167)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(107, 17)
-        Me.Label12.TabIndex = 2
-        Me.Label12.Text = "Stop Number:"
-        '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.ListBox1)
-        Me.Panel2.Controls.Add(Me.mapBox)
-        Me.Panel2.Location = New System.Drawing.Point(12, 404)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(671, 222)
-        Me.Panel2.TabIndex = 16
-        Me.Panel2.Visible = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(5, 8)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(238, 17)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Select Your Prefered Location"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 17
-        Me.ListBox1.Location = New System.Drawing.Point(5, 26)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(189, 140)
-        Me.ListBox1.TabIndex = 1
-        '
-        'mapBox
-        '
-        Me.mapBox.Location = New System.Drawing.Point(210, 26)
-        Me.mapBox.Name = "mapBox"
-        Me.mapBox.Size = New System.Drawing.Size(151, 165)
-        Me.mapBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.mapBox.TabIndex = 0
-        Me.mapBox.TabStop = False
-        '
-        'panelContinent
-        '
-        Me.panelContinent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.panelContinent.Controls.Add(Me.lblTimeLine)
-        Me.panelContinent.Controls.Add(Me.Label6)
-        Me.panelContinent.Controls.Add(Me.btnAntartica)
-        Me.panelContinent.Controls.Add(Me.btnAfrica)
-        Me.panelContinent.Controls.Add(Me.btnAsia)
-        Me.panelContinent.Controls.Add(Me.btnEurope)
-        Me.panelContinent.Controls.Add(Me.btnSouthAmerica)
-        Me.panelContinent.Controls.Add(Me.btnAustralia)
-        Me.panelContinent.Controls.Add(Me.btnNorthAmerica)
-        Me.panelContinent.Controls.Add(Me.Label5)
-        Me.panelContinent.Location = New System.Drawing.Point(12, 188)
-        Me.panelContinent.Name = "panelContinent"
-        Me.panelContinent.Size = New System.Drawing.Size(671, 210)
-        Me.panelContinent.TabIndex = 15
-        Me.panelContinent.Visible = False
-        '
-        'lblTimeLine
-        '
-        Me.lblTimeLine.AutoSize = True
-        Me.lblTimeLine.Location = New System.Drawing.Point(121, 7)
-        Me.lblTimeLine.Name = "lblTimeLine"
-        Me.lblTimeLine.Size = New System.Drawing.Size(0, 17)
-        Me.lblTimeLine.TabIndex = 14
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 7)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(142, 17)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Current Timeline:"
-        '
-        'btnAntartica
-        '
-        Me.btnAntartica.Location = New System.Drawing.Point(20, 148)
-        Me.btnAntartica.Name = "btnAntartica"
-        Me.btnAntartica.Size = New System.Drawing.Size(340, 39)
-        Me.btnAntartica.TabIndex = 12
-        Me.btnAntartica.Text = "Antartica"
-        Me.btnAntartica.UseVisualStyleBackColor = True
-        '
-        'btnAfrica
-        '
-        Me.btnAfrica.Location = New System.Drawing.Point(165, 102)
-        Me.btnAfrica.Name = "btnAfrica"
-        Me.btnAfrica.Size = New System.Drawing.Size(93, 40)
-        Me.btnAfrica.TabIndex = 10
-        Me.btnAfrica.Text = "Africa"
-        Me.btnAfrica.UseVisualStyleBackColor = True
-        '
-        'btnAsia
-        '
-        Me.btnAsia.Location = New System.Drawing.Point(264, 56)
-        Me.btnAsia.Name = "btnAsia"
-        Me.btnAsia.Size = New System.Drawing.Size(98, 40)
-        Me.btnAsia.TabIndex = 9
-        Me.btnAsia.Text = "Asia"
-        Me.btnAsia.UseVisualStyleBackColor = True
-        '
-        'btnEurope
-        '
-        Me.btnEurope.Location = New System.Drawing.Point(165, 56)
-        Me.btnEurope.Name = "btnEurope"
-        Me.btnEurope.Size = New System.Drawing.Size(93, 40)
-        Me.btnEurope.TabIndex = 8
-        Me.btnEurope.Text = "Europe"
-        Me.btnEurope.UseVisualStyleBackColor = True
-        '
-        'btnSouthAmerica
-        '
-        Me.btnSouthAmerica.Location = New System.Drawing.Point(20, 102)
-        Me.btnSouthAmerica.Name = "btnSouthAmerica"
-        Me.btnSouthAmerica.Size = New System.Drawing.Size(139, 40)
-        Me.btnSouthAmerica.TabIndex = 7
-        Me.btnSouthAmerica.Text = "South America"
-        Me.btnSouthAmerica.UseVisualStyleBackColor = True
-        '
-        'btnAustralia
-        '
-        Me.btnAustralia.Location = New System.Drawing.Point(264, 102)
-        Me.btnAustralia.Name = "btnAustralia"
-        Me.btnAustralia.Size = New System.Drawing.Size(98, 40)
-        Me.btnAustralia.TabIndex = 11
-        Me.btnAustralia.Text = "Australia"
-        Me.btnAustralia.UseVisualStyleBackColor = True
-        '
-        'btnNorthAmerica
-        '
-        Me.btnNorthAmerica.Location = New System.Drawing.Point(20, 56)
-        Me.btnNorthAmerica.Name = "btnNorthAmerica"
-        Me.btnNorthAmerica.Size = New System.Drawing.Size(139, 40)
-        Me.btnNorthAmerica.TabIndex = 6
-        Me.btnNorthAmerica.Text = "North America"
-        Me.btnNorthAmerica.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(3, 30)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(300, 17)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Select the Intended Continent of Visit:"
-        '
-        'panelAgeSelection
-        '
-        Me.panelAgeSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.panelAgeSelection.Controls.Add(Me.Label2)
-        Me.panelAgeSelection.Controls.Add(Me.btnFuture)
-        Me.panelAgeSelection.Controls.Add(Me.btnPast)
-        Me.panelAgeSelection.Location = New System.Drawing.Point(12, 62)
-        Me.panelAgeSelection.Name = "panelAgeSelection"
-        Me.panelAgeSelection.Size = New System.Drawing.Size(671, 52)
-        Me.panelAgeSelection.TabIndex = 13
-        Me.panelAgeSelection.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(5, 18)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(288, 17)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Please Select the Age you want to go!"
-        '
-        'btnFuture
-        '
-        Me.btnFuture.Location = New System.Drawing.Point(367, 6)
-        Me.btnFuture.Name = "btnFuture"
-        Me.btnFuture.Size = New System.Drawing.Size(70, 38)
-        Me.btnFuture.TabIndex = 4
-        Me.btnFuture.Text = "Future"
-        Me.btnFuture.UseVisualStyleBackColor = True
-        '
-        'btnPast
-        '
-        Me.btnPast.Location = New System.Drawing.Point(298, 6)
-        Me.btnPast.Name = "btnPast"
-        Me.btnPast.Size = New System.Drawing.Size(63, 38)
-        Me.btnPast.TabIndex = 3
-        Me.btnPast.Text = "Past"
-        Me.btnPast.UseVisualStyleBackColor = True
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.btnSearch)
-        Me.Panel1.Controls.Add(Me.txtTimeLine)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Panel1.Location = New System.Drawing.Point(12, 120)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(671, 62)
-        Me.Panel1.TabIndex = 14
-        Me.Panel1.Visible = False
-        '
-        'btnSearch
-        '
-        Me.btnSearch.Location = New System.Drawing.Point(198, 22)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(70, 28)
-        Me.btnSearch.TabIndex = 2
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
-        'txtTimeLine
-        '
-        Me.txtTimeLine.Location = New System.Drawing.Point(5, 26)
-        Me.txtTimeLine.Name = "txtTimeLine"
-        Me.txtTimeLine.Size = New System.Drawing.Size(189, 24)
-        Me.txtTimeLine.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 6)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(339, 17)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Please enter the timeline you want to visit:"
-        '
-        'panelTourStatus
-        '
-        Me.panelTourStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelTourStatus.Controls.Add(Me.Panel4)
-        Me.panelTourStatus.Controls.Add(Me.Button1)
-        Me.panelTourStatus.Controls.Add(Me.lblTourName)
-        Me.panelTourStatus.Controls.Add(Me.Label3)
-        Me.panelTourStatus.Controls.Add(Me.Label7)
-        Me.panelTourStatus.Controls.Add(Me.progressDuration)
-        Me.panelTourStatus.Controls.Add(Me.btnConfirmTrip)
-        Me.panelTourStatus.Controls.Add(Me.lblDurationstatus)
-        Me.panelTourStatus.Location = New System.Drawing.Point(689, 12)
-        Me.panelTourStatus.Name = "panelTourStatus"
-        Me.panelTourStatus.Size = New System.Drawing.Size(537, 335)
-        Me.panelTourStatus.TabIndex = 12
-        Me.panelTourStatus.Visible = False
-        '
-        'Panel4
-        '
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel4.Controls.Add(Me.panelBoxes)
-        Me.Panel4.Location = New System.Drawing.Point(6, 38)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(503, 233)
-        Me.Panel4.TabIndex = 14
-        '
-        'panelBoxes
-        '
-        Me.panelBoxes.Location = New System.Drawing.Point(9, 55)
-        Me.panelBoxes.Name = "panelBoxes"
-        Me.panelBoxes.Size = New System.Drawing.Size(465, 135)
-        Me.panelBoxes.TabIndex = 3
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(335, 302)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 29)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Cancel"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'lblTourName
-        '
-        Me.lblTourName.AutoSize = True
-        Me.lblTourName.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblTourName.Location = New System.Drawing.Point(84, 8)
-        Me.lblTourName.Name = "lblTourName"
-        Me.lblTourName.Size = New System.Drawing.Size(0, 17)
-        Me.lblTourName.TabIndex = 6
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(6, 8)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 17)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Tour Name:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Stencil", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(5, 311)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(102, 18)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Time Filled:"
-        '
-        'progressDuration
-        '
-        Me.progressDuration.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.progressDuration.Location = New System.Drawing.Point(6, 277)
-        Me.progressDuration.Maximum = 6
-        Me.progressDuration.Name = "progressDuration"
-        Me.progressDuration.Size = New System.Drawing.Size(503, 23)
-        Me.progressDuration.TabIndex = 10
-        '
-        'btnConfirmTrip
-        '
-        Me.btnConfirmTrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnConfirmTrip.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnConfirmTrip.ForeColor = System.Drawing.Color.Black
-        Me.btnConfirmTrip.Location = New System.Drawing.Point(432, 302)
-        Me.btnConfirmTrip.Name = "btnConfirmTrip"
-        Me.btnConfirmTrip.Size = New System.Drawing.Size(91, 28)
-        Me.btnConfirmTrip.TabIndex = 9
-        Me.btnConfirmTrip.Text = "Confirm Trip"
-        Me.btnConfirmTrip.UseVisualStyleBackColor = False
-        '
-        'lblDurationstatus
-        '
-        Me.lblDurationstatus.AutoSize = True
-        Me.lblDurationstatus.Font = New System.Drawing.Font("Stencil", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblDurationstatus.Location = New System.Drawing.Point(113, 311)
-        Me.lblDurationstatus.Name = "lblDurationstatus"
-        Me.lblDurationstatus.Size = New System.Drawing.Size(59, 18)
-        Me.lblDurationstatus.TabIndex = 11
-        Me.lblDurationstatus.Text = "0.0/6.0"
-        '
-        'panelCreateTour
-        '
-        Me.panelCreateTour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.panelCreateTour.Controls.Add(Me.btnTourSet)
-        Me.panelCreateTour.Controls.Add(Me.txtTourName)
-        Me.panelCreateTour.Controls.Add(Me.lblTourNamePrompt)
-        Me.panelCreateTour.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.panelCreateTour.Location = New System.Drawing.Point(12, 12)
-        Me.panelCreateTour.Name = "panelCreateTour"
-        Me.panelCreateTour.Size = New System.Drawing.Size(671, 44)
-        Me.panelCreateTour.TabIndex = 11
-        Me.panelCreateTour.Visible = False
-        '
-        'btnTourSet
-        '
-        Me.btnTourSet.Location = New System.Drawing.Point(308, 10)
-        Me.btnTourSet.Name = "btnTourSet"
-        Me.btnTourSet.Size = New System.Drawing.Size(86, 24)
-        Me.btnTourSet.TabIndex = 2
-        Me.btnTourSet.Text = "Set"
-        Me.btnTourSet.UseVisualStyleBackColor = True
-        '
-        'txtTourName
-        '
-        Me.txtTourName.Location = New System.Drawing.Point(143, 10)
-        Me.txtTourName.Name = "txtTourName"
-        Me.txtTourName.Size = New System.Drawing.Size(150, 24)
-        Me.txtTourName.TabIndex = 1
-        '
-        'lblTourNamePrompt
-        '
-        Me.lblTourNamePrompt.AutoSize = True
-        Me.lblTourNamePrompt.Location = New System.Drawing.Point(0, 14)
-        Me.lblTourNamePrompt.Name = "lblTourNamePrompt"
-        Me.lblTourNamePrompt.Size = New System.Drawing.Size(137, 17)
-        Me.lblTourNamePrompt.TabIndex = 0
-        Me.lblTourNamePrompt.Text = "Enter Tour Name:"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(12, 632)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 23)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Back to Home"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'CreateTour
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1256, 667)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.panelContinent)
-        Me.Controls.Add(Me.panelAgeSelection)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.panelTourStatus)
-        Me.Controls.Add(Me.panelCreateTour)
-        Me.Font = New System.Drawing.Font("Stencil", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Name = "CreateTour"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "CreateTour"
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.boxPlace, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.mapBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelContinent.ResumeLayout(False)
-        Me.panelContinent.PerformLayout()
-        Me.panelAgeSelection.ResumeLayout(False)
-        Me.panelAgeSelection.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.panelTourStatus.ResumeLayout(False)
-        Me.panelTourStatus.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.panelCreateTour.ResumeLayout(False)
-        Me.panelCreateTour.PerformLayout()
-        Me.ResumeLayout(False)
+        Panel3 = New Panel()
+        lblDesc = New Label()
+        btnAdder = New Button()
+        txtDuration = New TextBox()
+        NumericUpDown1 = New NumericUpDown()
+        Label8 = New Label()
+        boxPlace = New PictureBox()
+        lblPlaceName = New Label()
+        Label12 = New Label()
+        Panel2 = New Panel()
+        Label9 = New Label()
+        ListBox1 = New ListBox()
+        mapBox = New PictureBox()
+        panelContinent = New Panel()
+        lblTimeLine = New Label()
+        Label6 = New Label()
+        btnAntartica = New Button()
+        btnAfrica = New Button()
+        btnAsia = New Button()
+        btnEurope = New Button()
+        btnSouthAmerica = New Button()
+        btnAustralia = New Button()
+        btnNorthAmerica = New Button()
+        Label5 = New Label()
+        panelAgeSelection = New Panel()
+        Label2 = New Label()
+        btnFuture = New Button()
+        btnPast = New Button()
+        Panel1 = New Panel()
+        btnSearch = New Button()
+        txtTimeLine = New TextBox()
+        Label4 = New Label()
+        panelTourStatus = New Panel()
+        Panel4 = New Panel()
+        panelBoxes = New Panel()
+        Button1 = New Button()
+        lblTourName = New Label()
+        Label3 = New Label()
+        Label7 = New Label()
+        progressDuration = New ProgressBar()
+        btnConfirmTrip = New Button()
+        lblDurationstatus = New Label()
+        panelCreateTour = New Panel()
+        btnTourSet = New Button()
+        txtTourName = New TextBox()
+        lblTourNamePrompt = New Label()
+        Button2 = New Button()
+        Panel3.SuspendLayout()
+        CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(boxPlace, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        CType(mapBox, ComponentModel.ISupportInitialize).BeginInit()
+        panelContinent.SuspendLayout()
+        panelAgeSelection.SuspendLayout()
+        Panel1.SuspendLayout()
+        panelTourStatus.SuspendLayout()
+        Panel4.SuspendLayout()
+        panelCreateTour.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BorderStyle = BorderStyle.Fixed3D
+        Panel3.Controls.Add(lblDesc)
+        Panel3.Controls.Add(btnAdder)
+        Panel3.Controls.Add(txtDuration)
+        Panel3.Controls.Add(NumericUpDown1)
+        Panel3.Controls.Add(Label8)
+        Panel3.Controls.Add(boxPlace)
+        Panel3.Controls.Add(lblPlaceName)
+        Panel3.Controls.Add(Label12)
+        Panel3.Location = New Point(689, 358)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(537, 268)
+        Panel3.TabIndex = 17
+        Panel3.Visible = False
+        ' 
+        ' lblDesc
+        ' 
+        lblDesc.Font = New Font("Trebuchet MS", 8.25F, FontStyle.Italic, GraphicsUnit.Point)
+        lblDesc.Location = New Point(13, 27)
+        lblDesc.Name = "lblDesc"
+        lblDesc.Size = New Size(293, 117)
+        lblDesc.TabIndex = 6
+        lblDesc.Text = "Label7"
+        ' 
+        ' btnAdder
+        ' 
+        btnAdder.Location = New Point(24, 211)
+        btnAdder.Name = "btnAdder"
+        btnAdder.Size = New Size(179, 23)
+        btnAdder.TabIndex = 5
+        btnAdder.Text = "Add Visit"
+        btnAdder.UseVisualStyleBackColor = True
+        ' 
+        ' txtDuration
+        ' 
+        txtDuration.Location = New Point(148, 164)
+        txtDuration.Name = "txtDuration"
+        txtDuration.Size = New Size(100, 21)
+        txtDuration.TabIndex = 3
+        ' 
+        ' NumericUpDown1
+        ' 
+        NumericUpDown1.Location = New Point(401, 165)
+        NumericUpDown1.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
+        NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        NumericUpDown1.Name = "NumericUpDown1"
+        NumericUpDown1.Size = New Size(43, 21)
+        NumericUpDown1.TabIndex = 12
+        NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(20, 167)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(96, 13)
+        Label8.TabIndex = 2
+        Label8.Text = "Visit Duration:"
+        ' 
+        ' boxPlace
+        ' 
+        boxPlace.Location = New Point(315, 27)
+        boxPlace.Name = "boxPlace"
+        boxPlace.Size = New Size(193, 116)
+        boxPlace.SizeMode = PictureBoxSizeMode.StretchImage
+        boxPlace.TabIndex = 1
+        boxPlace.TabStop = False
+        ' 
+        ' lblPlaceName
+        ' 
+        lblPlaceName.AutoSize = True
+        lblPlaceName.Location = New Point(13, 10)
+        lblPlaceName.Name = "lblPlaceName"
+        lblPlaceName.Size = New Size(45, 13)
+        lblPlaceName.TabIndex = 0
+        lblPlaceName.Text = "Label7"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Location = New Point(288, 167)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(85, 13)
+        Label12.TabIndex = 2
+        Label12.Text = "Stop Number:"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BorderStyle = BorderStyle.Fixed3D
+        Panel2.Controls.Add(Label9)
+        Panel2.Controls.Add(ListBox1)
+        Panel2.Controls.Add(mapBox)
+        Panel2.Location = New Point(12, 404)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(671, 222)
+        Panel2.TabIndex = 16
+        Panel2.Visible = False
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(5, 8)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(187, 13)
+        Label9.TabIndex = 2
+        Label9.Text = "Select Your Prefered Location"
+        ' 
+        ' ListBox1
+        ' 
+        ListBox1.FormattingEnabled = True
+        ListBox1.Location = New Point(5, 26)
+        ListBox1.Name = "ListBox1"
+        ListBox1.Size = New Size(189, 134)
+        ListBox1.TabIndex = 1
+        ' 
+        ' mapBox
+        ' 
+        mapBox.Location = New Point(210, 26)
+        mapBox.Name = "mapBox"
+        mapBox.Size = New Size(151, 165)
+        mapBox.SizeMode = PictureBoxSizeMode.StretchImage
+        mapBox.TabIndex = 0
+        mapBox.TabStop = False
+        ' 
+        ' panelContinent
+        ' 
+        panelContinent.BorderStyle = BorderStyle.Fixed3D
+        panelContinent.Controls.Add(lblTimeLine)
+        panelContinent.Controls.Add(Label6)
+        panelContinent.Controls.Add(btnAntartica)
+        panelContinent.Controls.Add(btnAfrica)
+        panelContinent.Controls.Add(btnAsia)
+        panelContinent.Controls.Add(btnEurope)
+        panelContinent.Controls.Add(btnSouthAmerica)
+        panelContinent.Controls.Add(btnAustralia)
+        panelContinent.Controls.Add(btnNorthAmerica)
+        panelContinent.Controls.Add(Label5)
+        panelContinent.Location = New Point(12, 188)
+        panelContinent.Name = "panelContinent"
+        panelContinent.Size = New Size(671, 210)
+        panelContinent.TabIndex = 15
+        panelContinent.Visible = False
+        ' 
+        ' lblTimeLine
+        ' 
+        lblTimeLine.AutoSize = True
+        lblTimeLine.Location = New Point(121, 7)
+        lblTimeLine.Name = "lblTimeLine"
+        lblTimeLine.Size = New Size(0, 13)
+        lblTimeLine.TabIndex = 14
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(3, 7)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(112, 13)
+        Label6.TabIndex = 13
+        Label6.Text = "Current Timeline:"
+        ' 
+        ' btnAntartica
+        ' 
+        btnAntartica.Location = New Point(20, 148)
+        btnAntartica.Name = "btnAntartica"
+        btnAntartica.Size = New Size(340, 39)
+        btnAntartica.TabIndex = 12
+        btnAntartica.Text = "Antartica"
+        btnAntartica.UseVisualStyleBackColor = True
+        ' 
+        ' btnAfrica
+        ' 
+        btnAfrica.Location = New Point(165, 102)
+        btnAfrica.Name = "btnAfrica"
+        btnAfrica.Size = New Size(93, 40)
+        btnAfrica.TabIndex = 10
+        btnAfrica.Text = "Africa"
+        btnAfrica.UseVisualStyleBackColor = True
+        ' 
+        ' btnAsia
+        ' 
+        btnAsia.Location = New Point(264, 56)
+        btnAsia.Name = "btnAsia"
+        btnAsia.Size = New Size(98, 40)
+        btnAsia.TabIndex = 9
+        btnAsia.Text = "Asia"
+        btnAsia.UseVisualStyleBackColor = True
+        ' 
+        ' btnEurope
+        ' 
+        btnEurope.Location = New Point(165, 56)
+        btnEurope.Name = "btnEurope"
+        btnEurope.Size = New Size(93, 40)
+        btnEurope.TabIndex = 8
+        btnEurope.Text = "Europe"
+        btnEurope.UseVisualStyleBackColor = True
+        ' 
+        ' btnSouthAmerica
+        ' 
+        btnSouthAmerica.Location = New Point(20, 102)
+        btnSouthAmerica.Name = "btnSouthAmerica"
+        btnSouthAmerica.Size = New Size(139, 40)
+        btnSouthAmerica.TabIndex = 7
+        btnSouthAmerica.Text = "South America"
+        btnSouthAmerica.UseVisualStyleBackColor = True
+        ' 
+        ' btnAustralia
+        ' 
+        btnAustralia.Location = New Point(264, 102)
+        btnAustralia.Name = "btnAustralia"
+        btnAustralia.Size = New Size(98, 40)
+        btnAustralia.TabIndex = 11
+        btnAustralia.Text = "Australia"
+        btnAustralia.UseVisualStyleBackColor = True
+        ' 
+        ' btnNorthAmerica
+        ' 
+        btnNorthAmerica.Location = New Point(20, 56)
+        btnNorthAmerica.Name = "btnNorthAmerica"
+        btnNorthAmerica.Size = New Size(139, 40)
+        btnNorthAmerica.TabIndex = 6
+        btnNorthAmerica.Text = "North America"
+        btnNorthAmerica.UseVisualStyleBackColor = True
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(3, 30)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(234, 13)
+        Label5.TabIndex = 5
+        Label5.Text = "Select the Intended Continent of Visit:"
+        ' 
+        ' panelAgeSelection
+        ' 
+        panelAgeSelection.BorderStyle = BorderStyle.Fixed3D
+        panelAgeSelection.Controls.Add(Label2)
+        panelAgeSelection.Controls.Add(btnFuture)
+        panelAgeSelection.Controls.Add(btnPast)
+        panelAgeSelection.Location = New Point(12, 62)
+        panelAgeSelection.Name = "panelAgeSelection"
+        panelAgeSelection.Size = New Size(671, 52)
+        panelAgeSelection.TabIndex = 13
+        panelAgeSelection.Visible = False
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(5, 18)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(227, 13)
+        Label2.TabIndex = 5
+        Label2.Text = "Please Select the Age you want to go!"
+        ' 
+        ' btnFuture
+        ' 
+        btnFuture.Location = New Point(367, 6)
+        btnFuture.Name = "btnFuture"
+        btnFuture.Size = New Size(70, 38)
+        btnFuture.TabIndex = 4
+        btnFuture.Text = "Future"
+        btnFuture.UseVisualStyleBackColor = True
+        ' 
+        ' btnPast
+        ' 
+        btnPast.Location = New Point(298, 6)
+        btnPast.Name = "btnPast"
+        btnPast.Size = New Size(63, 38)
+        btnPast.TabIndex = 3
+        btnPast.Text = "Past"
+        btnPast.UseVisualStyleBackColor = True
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(btnSearch)
+        Panel1.Controls.Add(txtTimeLine)
+        Panel1.Controls.Add(Label4)
+        Panel1.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel1.Location = New Point(12, 120)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(671, 62)
+        Panel1.TabIndex = 14
+        Panel1.Visible = False
+        ' 
+        ' btnSearch
+        ' 
+        btnSearch.Location = New Point(198, 22)
+        btnSearch.Name = "btnSearch"
+        btnSearch.Size = New Size(70, 28)
+        btnSearch.TabIndex = 2
+        btnSearch.Text = "Search"
+        btnSearch.UseVisualStyleBackColor = True
+        ' 
+        ' txtTimeLine
+        ' 
+        txtTimeLine.Location = New Point(5, 26)
+        txtTimeLine.Name = "txtTimeLine"
+        txtTimeLine.Size = New Size(189, 21)
+        txtTimeLine.TabIndex = 1
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(3, 6)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(267, 13)
+        Label4.TabIndex = 0
+        Label4.Text = "Please enter the timeline you want to visit:"
+        ' 
+        ' panelTourStatus
+        ' 
+        panelTourStatus.BorderStyle = BorderStyle.FixedSingle
+        panelTourStatus.Controls.Add(Panel4)
+        panelTourStatus.Controls.Add(Button1)
+        panelTourStatus.Controls.Add(lblTourName)
+        panelTourStatus.Controls.Add(Label3)
+        panelTourStatus.Controls.Add(Label7)
+        panelTourStatus.Controls.Add(progressDuration)
+        panelTourStatus.Controls.Add(btnConfirmTrip)
+        panelTourStatus.Controls.Add(lblDurationstatus)
+        panelTourStatus.Location = New Point(689, 12)
+        panelTourStatus.Name = "panelTourStatus"
+        panelTourStatus.Size = New Size(537, 335)
+        panelTourStatus.TabIndex = 12
+        panelTourStatus.Visible = False
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BorderStyle = BorderStyle.Fixed3D
+        Panel4.Controls.Add(panelBoxes)
+        Panel4.Location = New Point(6, 38)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(503, 233)
+        Panel4.TabIndex = 14
+        ' 
+        ' panelBoxes
+        ' 
+        panelBoxes.Location = New Point(9, 55)
+        panelBoxes.Name = "panelBoxes"
+        panelBoxes.Size = New Size(465, 135)
+        panelBoxes.TabIndex = 3
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Red
+        Button1.Cursor = Cursors.Hand
+        Button1.ForeColor = SystemColors.ButtonHighlight
+        Button1.Location = New Point(335, 302)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(91, 29)
+        Button1.TabIndex = 13
+        Button1.Text = "Cancel"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' lblTourName
+        ' 
+        lblTourName.AutoSize = True
+        lblTourName.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        lblTourName.Location = New Point(84, 8)
+        lblTourName.Name = "lblTourName"
+        lblTourName.Size = New Size(0, 13)
+        lblTourName.TabIndex = 6
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Location = New Point(6, 8)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(72, 13)
+        Label3.TabIndex = 7
+        Label3.Text = "Tour Name:"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Label7.Location = New Point(5, 311)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(81, 14)
+        Label7.TabIndex = 12
+        Label7.Text = "Time Filled:"
+        ' 
+        ' progressDuration
+        ' 
+        progressDuration.ForeColor = Color.FromArgb(CByte(0), CByte(0), CByte(192))
+        progressDuration.Location = New Point(6, 277)
+        progressDuration.Maximum = 6
+        progressDuration.Name = "progressDuration"
+        progressDuration.Size = New Size(503, 23)
+        progressDuration.TabIndex = 10
+        ' 
+        ' btnConfirmTrip
+        ' 
+        btnConfirmTrip.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btnConfirmTrip.Cursor = Cursors.Hand
+        btnConfirmTrip.ForeColor = Color.Black
+        btnConfirmTrip.Location = New Point(432, 302)
+        btnConfirmTrip.Name = "btnConfirmTrip"
+        btnConfirmTrip.Size = New Size(91, 28)
+        btnConfirmTrip.TabIndex = 9
+        btnConfirmTrip.Text = "Confirm Trip"
+        btnConfirmTrip.UseVisualStyleBackColor = False
+        ' 
+        ' lblDurationstatus
+        ' 
+        lblDurationstatus.AutoSize = True
+        lblDurationstatus.Font = New Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        lblDurationstatus.Location = New Point(113, 311)
+        lblDurationstatus.Name = "lblDurationstatus"
+        lblDurationstatus.Size = New Size(47, 14)
+        lblDurationstatus.TabIndex = 11
+        lblDurationstatus.Text = "0.0/6.0"
+        ' 
+        ' panelCreateTour
+        ' 
+        panelCreateTour.BorderStyle = BorderStyle.Fixed3D
+        panelCreateTour.Controls.Add(btnTourSet)
+        panelCreateTour.Controls.Add(txtTourName)
+        panelCreateTour.Controls.Add(lblTourNamePrompt)
+        panelCreateTour.Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        panelCreateTour.Location = New Point(12, 12)
+        panelCreateTour.Name = "panelCreateTour"
+        panelCreateTour.Size = New Size(671, 44)
+        panelCreateTour.TabIndex = 11
+        panelCreateTour.Visible = False
+        ' 
+        ' btnTourSet
+        ' 
+        btnTourSet.Location = New Point(308, 10)
+        btnTourSet.Name = "btnTourSet"
+        btnTourSet.Size = New Size(86, 24)
+        btnTourSet.TabIndex = 2
+        btnTourSet.Text = "Set"
+        btnTourSet.UseVisualStyleBackColor = True
+        ' 
+        ' txtTourName
+        ' 
+        txtTourName.Location = New Point(143, 10)
+        txtTourName.Name = "txtTourName"
+        txtTourName.Size = New Size(150, 21)
+        txtTourName.TabIndex = 1
+        ' 
+        ' lblTourNamePrompt
+        ' 
+        lblTourNamePrompt.AutoSize = True
+        lblTourNamePrompt.Location = New Point(0, 14)
+        lblTourNamePrompt.Name = "lblTourNamePrompt"
+        lblTourNamePrompt.Size = New Size(109, 13)
+        lblTourNamePrompt.TabIndex = 0
+        lblTourNamePrompt.Text = "Enter Tour Name:"
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(12, 632)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(123, 23)
+        Button2.TabIndex = 18
+        Button2.Text = "Back to Home"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' CreateTour
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 13F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1256, 667)
+        Controls.Add(Button2)
+        Controls.Add(Panel3)
+        Controls.Add(Panel2)
+        Controls.Add(panelContinent)
+        Controls.Add(panelAgeSelection)
+        Controls.Add(Panel1)
+        Controls.Add(panelTourStatus)
+        Controls.Add(panelCreateTour)
+        Font = New Font("Stencil", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Name = "CreateTour"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "CreateTour"
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        CType(NumericUpDown1, ComponentModel.ISupportInitialize).EndInit()
+        CType(boxPlace, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        CType(mapBox, ComponentModel.ISupportInitialize).EndInit()
+        panelContinent.ResumeLayout(False)
+        panelContinent.PerformLayout()
+        panelAgeSelection.ResumeLayout(False)
+        panelAgeSelection.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        panelTourStatus.ResumeLayout(False)
+        panelTourStatus.PerformLayout()
+        Panel4.ResumeLayout(False)
+        panelCreateTour.ResumeLayout(False)
+        panelCreateTour.PerformLayout()
+        ResumeLayout(False)
 
     End Sub
 

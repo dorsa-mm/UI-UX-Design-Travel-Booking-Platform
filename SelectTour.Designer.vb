@@ -22,30 +22,31 @@ Partial Class SelectTour
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Snap ITC", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(311, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(148, 27)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Select Tour"
-        '
-        'SelectTour
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(815, 583)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "SelectTour"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "SelectTour"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Label1 = New Label()
+        SuspendLayout()
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(272, 17)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(117, 22)
+        Label1.TabIndex = 0
+        Label1.Text = "Select Tour"
+        ' 
+        ' SelectTour
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(713, 437)
+        Controls.Add(Label1)
+        Margin = New Padding(3, 2, 3, 2)
+        Name = "SelectTour"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "SelectTour"
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

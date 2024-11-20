@@ -24,10 +24,30 @@
 {"Argentina", New CountryInfo("Argentina, the second-largest country in South America, is known for its rich culture, tango music, and diverse landscapes.", My.Resources.Argentina, "Argentina is famous for its passion for football and producing players like Lionel Messi. The country boasts stunning natural wonders such as Iguazu Falls and the Andes Mountains. Buenos Aires, its capital, is a hub of European-inspired architecture and vibrant culture.")},
 {"Colombia", New CountryInfo("Colombia, located in South America, is known for its coffee, diverse ecosystems, and vibrant culture.", My.Resources.Colombia, "Colombia is the world's leading exporter of quality coffee beans. Its natural landscapes include the Andes, Amazon rainforest, and Caribbean beaches. The country’s music, like cumbia and vallenato, reflects its rich cultural heritage.")},
 {"Chile", New CountryInfo("Chile, a long and narrow country in South America, is known for its dramatic landscapes, from the Atacama Desert to Patagonia.", My.Resources.Chile, "Chile is a long, narrow country in South America, bordered by the Andes Mountains and the Pacific Ocean, known for its diverse geography, rich cultural heritage and prosperous economy.")},
-    {"Australia", New CountryInfo("Australia is a vast island continent and country in the Southern Hemisphere, characterized by its diverse wildlife, iconic cities and expansive Outback desert.", My.Resources.AustraliaCity, "Australia is famous for its unique and diverse wildlife, including kangaroos, koalas and wombats.The country has a strong economy, driven primarily by service industries, mining and agriculture. Australia's indigenous Aboriginal culture is one of the oldest continuing cultures on Earth.")},
-    {"New Zealand", New CountryInfo("New Zealand is an island nation in the southwestern Pacific Ocean, recognized for its breathtaking landscapes, diverse wildlife and rich cultural heritage.", My.Resources.NewZealand, "New Zealand's stunning landscapes include mountains, fjords, coastlines and geothermal wonders. The country is a popular destination for outdoor activities like hiking, skiing and bungee jumping. New Zealand has a strong focus on environmental conservation and sustainability.")},
-    {"Antarctica", New CountryInfo("Antarctica is the Earth's southernmost continent, covered by a thick ice sheet, known for its extreme climate, unique scientific research stations and protected wildlife.", My.Resources.AntarcticaCity, "Antarctica has no permanent residents, only temporary scientists and researchers at various stations. The Antarctic Treaty protects the continent's environment and ecosystem. Antarctica holds about 70% of the world's fresh water in its massive ice sheets.")}
-    }
+{"Australia", New CountryInfo("Australia is a vast island continent and country in the Southern Hemisphere, characterized by its diverse wildlife, iconic cities and expansive Outback desert.", My.Resources.AustraliaCity, "Australia is famous for its unique and diverse wildlife, including kangaroos, koalas and wombats.The country has a strong economy, driven primarily by service industries, mining and agriculture. Australia's indigenous Aboriginal culture is one of the oldest continuing cultures on Earth.")},
+{"New Zealand", New CountryInfo("New Zealand is an island nation in the southwestern Pacific Ocean, recognized for its breathtaking landscapes, diverse wildlife and rich cultural heritage.", My.Resources.NewZealand, "New Zealand's stunning landscapes include mountains, fjords, coastlines and geothermal wonders. The country is a popular destination for outdoor activities like hiking, skiing and bungee jumping. New Zealand has a strong focus on environmental conservation and sustainability.")},
+{"Antarctica", New CountryInfo("Antarctica is the Earth's southernmost continent, covered by a thick ice sheet, known for its extreme climate, unique scientific research stations and protected wildlife.", My.Resources.AntarcticaCity, "Antarctica has no permanent residents, only temporary scientists and researchers at various stations. The Antarctic Treaty protects the continent's environment and ecosystem. Antarctica holds about 70% of the world's fresh water in its massive ice sheets.")},
+{"Renaissance Florence", New CountryInfo("Renaissance Florence, the cradle of the Renaissance, is renowned for its art, architecture, and culture.", My.Resources.florence_in_the_renaissance_orig, "During the Renaissance, Florence was the epicenter of artistic and cultural rebirth, with figures like Michelangelo and da Vinci leaving a lasting legacy.")},
+{"Ancient Greece", New CountryInfo("Ancient Greece, the birthplace of democracy, philosophy, and Western culture.", My.Resources.ancient_greece_gettyimages_475594807, "Ancient Greece is celebrated for its contributions to philosophy, art, and politics, with iconic sites like the Acropolis.")},
+    {"Ancient Rome", New CountryInfo("Ancient Rome, a dominant empire known for its engineering, law, and culture.", My.Resources.how_big_was_the_roman_empire, "Ancient Rome shaped the world with innovations like aqueducts, the Colosseum, and a legal system that influences us today.")},
+    {"Paris in 1920s", New CountryInfo("Paris in the 1920s, a cultural hub for art, literature, and intellectual movements.", My.Resources.midnight_paris, "Known as the 'Jazz Age,' Paris in the 1920s was alive with creativity, hosting artists like Hemingway and Picasso.")},
+    {"Industrial Revolution-UK", New CountryInfo("The Industrial Revolution in the UK, a period of rapid technological advancement and economic transformation.", My.Resources.IndustrialUK, "The UK led the world into the industrial age, pioneering innovations in machinery, manufacturing, and transportation.")},
+    {"Irish Revolution", New CountryInfo("The Irish Revolution, a key period in Ireland's struggle for independence from British rule.", My.Resources.Irish, "The Irish Revolution saw pivotal moments that shaped Ireland's identity and led to the establishment of the Irish Free State.")},
+    {"Medieval Banquet Hall", New CountryInfo("Experience the charm of a Medieval Banquet Hall, complete with historical ambiance and cuisine.", My.Resources._medieval_banquet_halls_d7050b9a_3619_41ed_87b1_d05ba6787bbf, "Medieval Banquet Halls bring history to life with immersive settings and traditional feasts.")},
+    {"First Moon Landing", New CountryInfo("The First Moon Landing, a historic achievement in space exploration by NASA in 1969.", My.Resources.moonlanding3getty, "The Apollo 11 mission marked a monumental moment for humanity as Neil Armstrong set foot on the moon.")},
+    {"1960s Earth", New CountryInfo("The 1960s, a transformative decade marked by cultural revolutions and scientific achievements.", My.Resources._1960se, "From civil rights movements to space exploration, the 1960s reshaped society and advanced technology.")},
+    {"Christ The Redeemer", New CountryInfo("Christ the Redeemer, a world-famous statue in Rio de Janeiro, Brazil.", My.Resources.CR, "Standing atop Corcovado Mountain, Christ the Redeemer symbolizes peace and hospitality.")},
+    {"Iguazu Falls", New CountryInfo("Iguazu Falls, a breathtaking natural wonder on the border of Brazil and Argentina.", My.Resources.Iguazu, "Iguazu Falls is one of the world's largest waterfall systems, offering stunning views and lush surroundings.")},
+{"Twelve Apostles", New CountryInfo("The Twelve Apostles, iconic limestone stacks off Australia's Great Ocean Road.", My.Resources.The_Twelve_Apostles_2011, "These natural rock formations are a must-see, showcasing the rugged beauty of Australia's coastline.")},
+    {"Research Stations", New CountryInfo("Research Stations, hubs for scientific exploration and discovery in remote areas.", My.Resources.RS, "Research Stations enable groundbreaking studies in regions like Antarctica and deep space.")},
+    {"Fossil Zone", New CountryInfo("Fossil Zones, key areas for uncovering Earth's ancient history through paleontological finds.", My.Resources.FZ, "Fossil Zones reveal fascinating insights into the evolution of life and past ecosystems.")}}
+
+
+
+
+
+
+
 
     Private Sub BtnTourSet_Click(sender As Object, e As EventArgs) Handles btnTourSet.Click
         Dim tourname As String = txtTourName.Text
@@ -84,12 +104,12 @@
 
     Private continentCountries As New Dictionary(Of String, List(Of String)) From {
     {"Africa", New List(Of String) From {"Nigeria", "Egypt", "South Africa", "Kenya", "Ghana"}},
-    {"Asia", New List(Of String) From {"China", "India", "Japan", "South Korea", "Indonesia"}},
-    {"Europe", New List(Of String) From {"France", "Germany", "Italy", "Spain", "United Kingdom"}},
-    {"North America", New List(Of String) From {"United States", "Canada", "Mexico"}},
-    {"South America", New List(Of String) From {"Brazil", "Argentina", "Colombia", "Chile"}},
-    {"Australia", New List(Of String) From {"Australia", "New Zealand"}},
-    {"Antarctica", New List(Of String) From {"Research Stations"}}
+    {"Asia", New List(Of String) From {"China", "India", "Japan"}},
+    {"Europe", New List(Of String) From {"Renaissance Florence", "Ancient Greece", "Ancient Rome", "Paris in 1920s", "Industrial Revolution-UK", "Irish Revolution"}},
+    {"North America", New List(Of String) From {"United States", "Canada", "Mexico", "Medieval Banquet Hall", "First Moon Landing", "1960s Earth"}},
+    {"South America", New List(Of String) From {"Brazil", "Christ The Redeemer", "Iguazu Falls"}},
+    {"Australia", New List(Of String) From {"Australia", "New Zealand", "Twelve Apostles"}},
+    {"Antarctica", New List(Of String) From {"Research Stations", "Fossil Zone"}}
 }
     Private Sub UpdateListBox(continent As String)
 

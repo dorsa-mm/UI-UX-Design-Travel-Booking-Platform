@@ -65,4 +65,8 @@
     Private Sub Modified(trip As Trip)
         RaiseEvent Confirm(trip)
     End Sub
+
+    Private Sub SelectTour_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
