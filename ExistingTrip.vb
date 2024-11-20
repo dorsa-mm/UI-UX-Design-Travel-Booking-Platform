@@ -2,26 +2,44 @@
 Imports TimebusB2.MainInterface
 Imports TimebusB2.TripOK
 
+
+
+
 Public Class ExistingTrip
-    Dim stopDetailsList1 As New List(Of StopDetails)
-    Dim stopDetailsList2 As New List(Of StopDetails)
+
+
+
+
+
+
+
+
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim time1 As Integer = Label3.Text
-        ' Create a new Trip object and fill it with the current trip data
-        Dim trip As New Trip
-        trip.TripName = ToolStripStatusLabel1.Text
-        trip.TotalDuration = time1
+        Dim ex1 As New ExistingConfirmation()
+        ex1.Label3.Text = ToolStripStatusLabel1.Text
+        ex1.Show()
+        Me.Hide()
+    End Sub
 
-        ' Add all stops to the trip
-        For Each stops In stopDetailsList1
-            trip.Stops.Add(stops)
-        Next
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim ex1 As New ExistingConfirmation()
+        ex1.Label3.Text = ToolStripStatusLabel2.Text
+        ex1.Show()
+        Me.Hide()
+    End Sub
 
-        ' Pass the Trip object to the new form
-        Dim tripSummaryForm As New TripOK(trip)
-        tripSummaryForm.Show() ' Show the new form
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ex1 As New ExistingConfirmation()
+        ex1.Label3.Text = ToolStripStatusLabel3.Text
+        ex1.Show()
+        Me.Hide()
+    End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim MI As New MainInterface()
+        MI.Show()
+        Me.Close()
     End Sub
 End Class

@@ -68,6 +68,7 @@ Partial Class CreateTour
         btnTourSet = New Button()
         txtTourName = New TextBox()
         lblTourNamePrompt = New Label()
+        Button2 = New Button()
         Panel3.SuspendLayout()
         CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
         CType(boxPlace, ComponentModel.ISupportInitialize).BeginInit()
@@ -536,11 +537,21 @@ Partial Class CreateTour
         lblTourNamePrompt.TabIndex = 0
         lblTourNamePrompt.Text = "Enter Tour Name:"
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(12, 568)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(123, 23)
+        Button2.TabIndex = 18
+        Button2.Text = "Back to Home"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' CreateTour
         ' 
         AutoScaleDimensions = New SizeF(7F, 13F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(929, 603)
+        Controls.Add(Button2)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(panelContinent)
@@ -619,4 +630,5 @@ Partial Class CreateTour
     Friend WithEvents lblTourNamePrompt As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents Button2 As Button
 End Class
