@@ -152,6 +152,10 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         currentIndex = (currentIndex + 1)
+        If currentIndex >= _trip.Stops.Count Then
+            RaiseEvent TourEnd()
+            Close()
+        End If
         ShowCurrentTrip()
     End Sub
 
