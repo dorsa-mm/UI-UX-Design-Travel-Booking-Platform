@@ -11,9 +11,11 @@
         If trips.Count = 0 Then
             Button1.Enabled = False
             PilotBtn.Enabled = False
+            btnModifyTour.Enabled = False
         Else
             Button1.Enabled = True
             PilotBtn.Enabled = True
+            btnModifyTour.Enabled = True
         End If
     End Sub
 
@@ -29,9 +31,11 @@
         If trips.Count = 0 Then
             Button1.Enabled = False
             PilotBtn.Enabled = False
+            btnModifyTour.Enabled = False
         Else
             Button1.Enabled = True
             PilotBtn.Enabled = True
+            btnModifyTour.Enabled = True
         End If
         Show()
     End Sub
@@ -41,9 +45,11 @@
         If trips.Count = 0 Then
             Button1.Enabled = False
             PilotBtn.Enabled = False
+            btnModifyTour.Enabled = False
         Else
             Button1.Enabled = True
             PilotBtn.Enabled = True
+            btnModifyTour.Enabled = True
         End If
     End Sub
 
@@ -63,9 +69,11 @@
         If trips.Count = 0 Then
             Button1.Enabled = False
             PilotBtn.Enabled = False
+            btnModifyTour.Enabled = False
         Else
             Button1.Enabled = True
             PilotBtn.Enabled = True
+            btnModifyTour.Enabled = True
         End If
     End Sub
 
@@ -104,9 +112,11 @@
         If trips.Count = 0 Then
             Button1.Enabled = False
             PilotBtn.Enabled = False
+            btnModifyTour.Enabled = False
         Else
             Button1.Enabled = True
             PilotBtn.Enabled = True
+            btnModifyTour.Enabled = True
         End If
     End Sub
 End Class
