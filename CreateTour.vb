@@ -494,6 +494,7 @@ Public Class CreateTour
 
     Private Sub btnConfirmTrip_Click(sender As Object, e As EventArgs) Handles btnConfirmTrip.Click
         ' Create a new Trip object and fill it with the current trip data
+        Me.Hide()
         Dim trip As New Trip()
         trip.TripName = lblTourName.Text
         trip.TotalDuration = cumulativeDuration
@@ -506,6 +507,11 @@ Public Class CreateTour
         ' Pass the Trip object to the new form
         Dim tripSummaryForm As New TripOK(trip)
         tripSummaryForm.Show() ' Show the new form
+
+
+
+
+
     End Sub
 
 End Class

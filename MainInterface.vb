@@ -2,6 +2,7 @@
 
 
     Private Sub btnCreateTour_Click(sender As Object, e As EventArgs) Handles btnCreateTour.Click
+        Me.Hide()
         Dim CreateTour As New CreateTour()
         CreateTour.Show()
 
@@ -34,6 +35,7 @@
     End Class
 
     Private Sub btnCopyTour_Click(sender As Object, e As EventArgs) Handles btnCopyTour.Click
-
+        Dim CopyTour As New ExistingTrip()
+        CopyTour.Show()
     End Sub
 End Class

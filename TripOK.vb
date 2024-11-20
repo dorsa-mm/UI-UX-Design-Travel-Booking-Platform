@@ -1,5 +1,5 @@
 ﻿Imports TimebusB2.CreateTour
-Imports TimebusB2.MainInterface.StopDetails
+
 
 Public Class TripOK
     Private _trip As Trip
@@ -24,5 +24,7 @@ Public Class TripOK
     ' Handle modifications or updates to the trip in this form
     Private Sub btnModifyTrip_Click(sender As Object, e As EventArgs) Handles btnModifyTrip.Click
         Me.Close()
+        Dim MainInterface As New MainInterface()
+        MainInterface.Show()
     End Sub
 End Class
