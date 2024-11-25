@@ -47,6 +47,8 @@
             Dim endTour As New EndOfTour
             AddHandler endTour.EndTour, AddressOf TourEnded
             endTour.Show()
+            slideTimer.Stop()
+            progressTimer.Stop()
             Close()
         Else
             ShowCurrentTrip()
@@ -154,6 +156,8 @@
         currentIndex = (currentIndex + 1)
         If currentIndex >= _trip.Stops.Count Then
             RaiseEvent TourEnd()
+            slideTimer.Stop()
+            progressTimer.Stop()
             Close()
         End If
         ShowCurrentTrip()
@@ -161,6 +165,8 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         RaiseEvent Emergency()
+        slideTimer.Stop()
+        progressTimer.Stop()
         Close()
     End Sub
 End Class

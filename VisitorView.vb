@@ -60,6 +60,8 @@
             Dim endTour As New EndOfTour
             AddHandler endTour.EndTour, AddressOf TourEnded
             endTour.Show()
+            slideTimer.Stop()
+            progressTimer.Stop()
             Close()
         Else
             ShowCurrentTrip()
@@ -67,6 +69,8 @@
     End Sub
 
     Private Sub TourEnded()
+        slideTimer.Stop()
+        progressTimer.Stop()
         RaiseEvent TourEnd()
     End Sub
 
