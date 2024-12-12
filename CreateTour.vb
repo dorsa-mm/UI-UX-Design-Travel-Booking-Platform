@@ -55,18 +55,10 @@
         If tourname = "" Then
             MessageBox.Show("Please enter a valid name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            lblTourName.Text = tourname
-            panelAgeSelection.Visible = True
+            Panel1.Visible = True
             panelTourStatus.Visible = True
+            lblTourName.Text = tourname
         End If
-    End Sub
-
-    Private Sub btnPast_Click(sender As Object, e As EventArgs) Handles btnPast.Click
-        Panel1.Visible = True
-    End Sub
-
-    Private Sub btnFuture_Click(sender As Object, e As EventArgs) Handles btnFuture.Click
-        Panel1.Visible = True
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -74,7 +66,6 @@
         If EraName = "" Then
             MessageBox.Show("Please enter a valid era", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            lblTimeLine.Text = EraName
             panelContinent.Visible = True
         End If
     End Sub
@@ -413,7 +404,7 @@
         lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
 
         ' Clear input fields
-        txtDuration.Clear()
+        txtDuration.Text = 1
 
         ' Reposition all buttons dynamically
         PositionBoxes2()

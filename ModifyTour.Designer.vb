@@ -26,8 +26,8 @@ Partial Class ModifyTour
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.lblTripName1 = New System.Windows.Forms.Label()
         Me.btnModify1 = New System.Windows.Forms.Button()
+        Me.lblTripName1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -51,37 +51,28 @@ Partial Class ModifyTour
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(142, 21)
+        Me.Panel2.Location = New System.Drawing.Point(186, 21)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1122, 115)
+        Me.Panel2.Size = New System.Drawing.Size(1078, 115)
         Me.Panel2.TabIndex = 25
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 70)
+        Me.Label6.Location = New System.Drawing.Point(6, 86)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(129, 18)
+        Me.Label6.Size = New System.Drawing.Size(174, 18)
         Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Visit Duration:"
+        Me.Label6.Text = "Visit Duration (hrs):"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(10, 40)
+        Me.Label7.Location = New System.Drawing.Point(6, 52)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(126, 18)
         Me.Label7.TabIndex = 23
         Me.Label7.Text = "Visit Location:"
-        '
-        'lblTripName1
-        '
-        Me.lblTripName1.AutoSize = True
-        Me.lblTripName1.Location = New System.Drawing.Point(6, 12)
-        Me.lblTripName1.Name = "lblTripName1"
-        Me.lblTripName1.Size = New System.Drawing.Size(61, 18)
-        Me.lblTripName1.TabIndex = 2
-        Me.lblTripName1.Text = "Label1"
         '
         'btnModify1
         '
@@ -91,6 +82,15 @@ Partial Class ModifyTour
         Me.btnModify1.TabIndex = 21
         Me.btnModify1.Text = "Save"
         Me.btnModify1.UseVisualStyleBackColor = True
+        '
+        'lblTripName1
+        '
+        Me.lblTripName1.AutoSize = True
+        Me.lblTripName1.Location = New System.Drawing.Point(6, 12)
+        Me.lblTripName1.Name = "lblTripName1"
+        Me.lblTripName1.Size = New System.Drawing.Size(61, 18)
+        Me.lblTripName1.TabIndex = 2
+        Me.lblTripName1.Text = "Label1"
         '
         'Label1
         '

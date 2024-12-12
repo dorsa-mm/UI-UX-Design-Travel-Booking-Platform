@@ -45,8 +45,6 @@
         lbl.Size = New Size(130, 25)
         lbl.Location = New Point(10, 10)
         lbl.TextAlign = ContentAlignment.MiddleCenter
-        lbl.BorderStyle = BorderStyle.FixedSingle
-        lbl.BackColor = Color.White
         lbl.Text = _trips.Stops(index).LocationName
         panel.Controls.Add(lbl)
 

@@ -12,6 +12,8 @@
     Private pause = False
     Private remainingTime
     Public Event Emergency()
+    Private lastStartTime As Integer
+
     Public Sub New(trip As Trip)
 
         ' This call is required by the designer.
@@ -31,6 +33,7 @@
         End If
     End Sub
     Private Sub ShowCurrentTrip()
+        lastStartTime = Environment.TickCount
         progressTimer.Interval = 100
         progressTimer.Start()
         slideTimer.Interval = 20000 * _trip.Stops(currentIndex).Duration
@@ -58,8 +61,15 @@
         RaiseEvent TourEnd()
     End Sub
     Private Sub progressTimer_Tick(sender As Object, e As EventArgs) Handles progressTimer.Tick
-        Dim elapsed As Integer = slideTimer.Interval - (Environment.TickCount Mod slideTimer.Interval)
-        ProgressBar1.Value = 100 - (elapsed * 100 / slideTimer.Interval)
+        Dim currentTime As Integer = Environment.TickCount
+        Dim elapsed As Integer = currentTime - lastStartTime
+
+        If elapsed >= slideTimer.Interval Then
+            lastStartTime = currentTime
+            elapsed = 0
+        End If
+
+        ProgressBar1.Value = elapsed * 100 / slideTimer.Interval
     End Sub
     Private Sub ZoomIn_Click(sender As Object, e As EventArgs) Handles ZoomIn.Click
         imageScale += 0.1 ' Increment the zoom scale

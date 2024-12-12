@@ -14,6 +14,7 @@
     Private originalWidth
     Private originalHeight
     Private isDragging As Boolean = False
+    Private lastStartTime As Integer
     Private startPoint As Point
 
     Public Sub New(trip As Trip)
@@ -39,6 +40,7 @@
     End Sub
 
     Private Sub ShowCurrentTrip()
+        lastStartTime = Environment.TickCount
         progressTimer.Interval = 100
         progressTimer.Start()
         slideTimer.Interval = 20000 * _trip.Stops(currentIndex).Duration
@@ -75,8 +77,15 @@
     End Sub
 
     Private Sub progressTimer_Tick(sender As Object, e As EventArgs) Handles progressTimer.Tick
-        Dim elapsed As Integer = slideTimer.Interval - (Environment.TickCount Mod slideTimer.Interval)
-        ProgressBar1.Value = 100 - (elapsed * 100 / slideTimer.Interval)
+        Dim currentTime As Integer = Environment.TickCount
+        Dim elapsed As Integer = currentTime - lastStartTime
+
+        If elapsed >= slideTimer.Interval Then
+            lastStartTime = currentTime
+            elapsed = 0
+        End If
+
+        ProgressBar1.Value = elapsed * 100 / slideTimer.Interval
     End Sub
 
     Private Sub VolumeUp_Click(sender As Object, e As EventArgs) Handles VolumeUp.Click
