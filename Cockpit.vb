@@ -54,9 +54,11 @@
             progressTimer.Stop()
             Close()
         Else
+            Me.Button4.Enabled = currentIndex < _trip.Stops.Count - 1
             ShowCurrentTrip()
         End If
     End Sub
+
     Private Sub TourEnded()
         RaiseEvent TourEnd()
     End Sub
@@ -169,8 +171,10 @@
             slideTimer.Stop()
             progressTimer.Stop()
             Close()
+        Else
+            Me.Button4.Enabled = currentIndex < _trip.Stops.Count - 1
+            ShowCurrentTrip()
         End If
-        ShowCurrentTrip()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
