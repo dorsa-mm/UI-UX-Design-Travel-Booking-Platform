@@ -74,6 +74,3 @@ Importance of User-Centered Design: User feedback was crucial in shaping a desig
 Collaboration Skills: Leading a team of 4 required clear communication, delegation, and facilitation of ideas, which enhanced teamwork and productivity.
 Technical Growth: Implementing the design in Visual Basic deepened our understanding of bridging the gap between prototyping and functional development.
 Iterative Design Value: The hackathon-style approach emphasized the importance of rapid iteration in response to user feedback.
-=======
-# TimebusB2
->>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
