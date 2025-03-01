@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Project Context / Background & Timeline:
 
 This project aimed to create an intuitive travel booking system that simplifies the process of finding and reserving travel options for users with varying levels of technical expertise. The platform was designed as part of a hackathon-style initiative, emphasizing usability, efficiency, and error reduction. The project spanned 12 weeks, from brainstorming and prototyping to testing and delivering a polished, interactive platform.
