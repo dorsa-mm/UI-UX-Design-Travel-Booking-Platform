@@ -12,8 +12,11 @@
     Private pause = False
     Private remainingTime
     Public Event Emergency()
+<<<<<<< HEAD
     Private lastStartTime As Integer
 
+=======
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     Public Sub New(trip As Trip)
 
         ' This call is required by the designer.
@@ -33,7 +36,10 @@
         End If
     End Sub
     Private Sub ShowCurrentTrip()
+<<<<<<< HEAD
         lastStartTime = Environment.TickCount
+=======
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         progressTimer.Interval = 100
         progressTimer.Start()
         slideTimer.Interval = 20000 * _trip.Stops(currentIndex).Duration
@@ -54,15 +60,22 @@
             progressTimer.Stop()
             Close()
         Else
+<<<<<<< HEAD
             Me.Button4.Enabled = currentIndex < _trip.Stops.Count - 1
             ShowCurrentTrip()
         End If
     End Sub
 
+=======
+            ShowCurrentTrip()
+        End If
+    End Sub
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     Private Sub TourEnded()
         RaiseEvent TourEnd()
     End Sub
     Private Sub progressTimer_Tick(sender As Object, e As EventArgs) Handles progressTimer.Tick
+<<<<<<< HEAD
         Dim currentTime As Integer = Environment.TickCount
         Dim elapsed As Integer = currentTime - lastStartTime
 
@@ -72,6 +85,10 @@
         End If
 
         ProgressBar1.Value = elapsed * 100 / slideTimer.Interval
+=======
+        Dim elapsed As Integer = slideTimer.Interval - (Environment.TickCount Mod slideTimer.Interval)
+        ProgressBar1.Value = 100 - (elapsed * 100 / slideTimer.Interval)
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     End Sub
     Private Sub ZoomIn_Click(sender As Object, e As EventArgs) Handles ZoomIn.Click
         imageScale += 0.1 ' Increment the zoom scale
@@ -171,10 +188,15 @@
             slideTimer.Stop()
             progressTimer.Stop()
             Close()
+<<<<<<< HEAD
         Else
             Me.Button4.Enabled = currentIndex < _trip.Stops.Count - 1
             ShowCurrentTrip()
         End If
+=======
+        End If
+        ShowCurrentTrip()
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

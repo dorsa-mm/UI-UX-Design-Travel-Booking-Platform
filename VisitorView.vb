@@ -14,7 +14,10 @@
     Private originalWidth
     Private originalHeight
     Private isDragging As Boolean = False
+<<<<<<< HEAD
     Private lastStartTime As Integer
+=======
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     Private startPoint As Point
 
     Public Sub New(trip As Trip)
@@ -40,7 +43,10 @@
     End Sub
 
     Private Sub ShowCurrentTrip()
+<<<<<<< HEAD
         lastStartTime = Environment.TickCount
+=======
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         progressTimer.Interval = 100
         progressTimer.Start()
         slideTimer.Interval = 20000 * _trip.Stops(currentIndex).Duration
@@ -77,6 +83,7 @@
     End Sub
 
     Private Sub progressTimer_Tick(sender As Object, e As EventArgs) Handles progressTimer.Tick
+<<<<<<< HEAD
         Dim currentTime As Integer = Environment.TickCount
         Dim elapsed As Integer = currentTime - lastStartTime
 
@@ -86,6 +93,10 @@
         End If
 
         ProgressBar1.Value = elapsed * 100 / slideTimer.Interval
+=======
+        Dim elapsed As Integer = slideTimer.Interval - (Environment.TickCount Mod slideTimer.Interval)
+        ProgressBar1.Value = 100 - (elapsed * 100 / slideTimer.Interval)
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     End Sub
 
     Private Sub VolumeUp_Click(sender As Object, e As EventArgs) Handles VolumeUp.Click

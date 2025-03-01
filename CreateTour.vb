@@ -55,6 +55,7 @@
         If tourname = "" Then
             MessageBox.Show("Please enter a valid name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
+<<<<<<< HEAD
             Panel1.Visible = True
             panelTourStatus.Visible = True
             lblTourName.Text = tourname
@@ -69,6 +70,62 @@
             panelContinent.Visible = True
         End If
     End Sub
+=======
+            lblTourName.Text = tourname
+            panelAgeSelection.Visible = True
+            panelTourStatus.Visible = True
+        End If
+    End Sub
+
+    Private Sub btnPast_Click(sender As Object, e As EventArgs) Handles btnPast.Click
+        Panel1.Visible = True
+    End Sub
+
+    'Private Sub btnFuture_Click(sender As Object, e As EventArgs) Handles btnFuture.Click
+    '   Panel1.Visible = True
+    'End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim input As String = txtTimeLine.Text.Trim()
+        Dim eraNumber As Integer
+
+        ' Check if the input is a valid integer.
+        If Not Integer.TryParse(input, eraNumber) Then
+            MessageBox.Show("PLEASE ENTER A NUMBER (1, 2, 3, OR 4) FOR THE ERA.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtTimeLine.Focus()
+            txtTimeLine.SelectAll()
+            Return
+        End If
+
+        ' Ensure the number is between 1 and 4.
+        If eraNumber < 1 OrElse eraNumber > 4 Then
+            MessageBox.Show("PLEASE ENTER A VALID NUMBER (1, 2, 3, OR 4) FOR THE ERA.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtTimeLine.Focus()
+            txtTimeLine.SelectAll()
+            Return
+        End If
+
+        ' Map the number to the corresponding era.
+        Dim eraName As String = ""
+        Select Case eraNumber
+            Case 1
+                eraName = "PRECAMBRIAN"
+            Case 2
+                eraName = "PALEOZOIC"
+            Case 3
+                eraName = "MESOZOIC"
+            Case 4
+                eraName = "CENOZOIC"
+        End Select
+
+        ' Set the label and show the next panel.
+        lblTimeLine.Text = eraName
+        panelContinent.Visible = True
+    End Sub
+
+
+
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     Private Sub UpdateMap(continent As String)
         Panel2.Visible = True
         If continent = "NA" Then
@@ -404,10 +461,25 @@
         lblDurationstatus.Text = $"{cumulativeDuration:F1}/6 hours"
 
         ' Clear input fields
+<<<<<<< HEAD
         txtDuration.Text = 1
 
         ' Reposition all buttons dynamically
         PositionBoxes2()
+=======
+        txtDuration.Clear()
+
+        ' Reposition all buttons dynamically
+        PositionBoxes2()
+
+        Panel3.Visible = False        ' Hide the "Place Info" panel
+        Panel2.Visible = False        ' Hide the "Location List" panel
+        panelContinent.Visible = False ' Hide the "Continent" panel
+
+        Panel1.Visible = True         ' Show the panel prompting for era again
+        txtTimeLine.Clear()           ' (Optional) Clear the timeline text box if you want them to type anew
+
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     End Sub
 
 
@@ -476,6 +548,23 @@
 
     Private Sub CreateTour_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         panelCreateTour.Visible = True
+<<<<<<< HEAD
+=======
+        SetAllTextBoxesUpper(Me)
+    End Sub
+
+    Private Sub SetAllTextBoxesUpper(ByVal parentControl As Control)
+        For Each ctrl As Control In parentControl.Controls
+            If TypeOf ctrl Is TextBox Then
+                ' Set the CharacterCasing property to Upper
+                DirectCast(ctrl, TextBox).CharacterCasing = CharacterCasing.Upper
+            End If
+            ' Recursively call this function if the control has child controls.
+            If ctrl.HasChildren Then
+                SetAllTextBoxesUpper(ctrl)
+            End If
+        Next
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     End Sub
 
     Private Sub btnConfirmTrip_Click(sender As Object, e As EventArgs) Handles btnConfirmTrip.Click

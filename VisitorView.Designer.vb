@@ -443,7 +443,11 @@ Partial Class VisitorView
         ' Tour_Name
         ' 
         Tour_Name.AutoSize = True
+<<<<<<< HEAD
         Tour_Name.Font = New Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point)
+=======
+        Tour_Name.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         Tour_Name.Location = New Point(18, 9)
         Tour_Name.Name = "Tour_Name"
         Tour_Name.Size = New Size(76, 15)
@@ -672,7 +676,11 @@ Partial Class VisitorView
         ' Label4
         ' 
         Label4.AutoSize = True
+<<<<<<< HEAD
         Label4.Font = New Font("Snap ITC", 8F, FontStyle.Regular, GraphicsUnit.Point)
+=======
+        Label4.Font = New Font("Snap ITC", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         Label4.Location = New Point(10, 527)
         Label4.Name = "Label4"
         Label4.Size = New Size(104, 15)
@@ -689,7 +697,11 @@ Partial Class VisitorView
         ' 
         ' VisitorView
         ' 
+<<<<<<< HEAD
         AutoScaleDimensions = New SizeF(7F, 15F)
+=======
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1241, 548)
         Controls.Add(ProgressBar1)
@@ -795,4 +807,8 @@ Partial Class VisitorView
     Friend WithEvents ZoomIn As PictureBox
     Friend WithEvents ZoomOut As PictureBox
     Friend WithEvents Button3 As Button
+<<<<<<< HEAD
 End Class
+=======
+End Class
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)

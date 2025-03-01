@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Project Context / Background & Timeline:
 
 This project aimed to create an intuitive travel booking system that simplifies the process of finding and reserving travel options for users with varying levels of technical expertise. The platform was designed as part of a hackathon-style initiative, emphasizing usability, efficiency, and error reduction. The project spanned 12 weeks, from brainstorming and prototyping to testing and delivering a polished, interactive platform.
@@ -73,3 +74,6 @@ Importance of User-Centered Design: User feedback was crucial in shaping a desig
 Collaboration Skills: Leading a team of 4 required clear communication, delegation, and facilitation of ideas, which enhanced teamwork and productivity.
 Technical Growth: Implementing the design in Visual Basic deepened our understanding of bridging the gap between prototyping and functional development.
 Iterative Design Value: The hackathon-style approach emphasized the importance of rapid iteration in response to user feedback.
+=======
+# TimebusB2
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)

@@ -45,6 +45,11 @@
         lbl.Size = New Size(130, 25)
         lbl.Location = New Point(10, 10)
         lbl.TextAlign = ContentAlignment.MiddleCenter
+<<<<<<< HEAD
+=======
+        lbl.BorderStyle = BorderStyle.FixedSingle
+        lbl.BackColor = Color.White
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         lbl.Text = _trips.Stops(index).LocationName
         panel.Controls.Add(lbl)
 
@@ -180,6 +185,15 @@
         lblSelected.BackColor = Color.LightBlue
     End Sub
 
+<<<<<<< HEAD
+=======
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim MI As New MainInterface()
+        MI.Show()
+        Me.Hide()
+    End Sub
+
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     Private Sub btnModify1_Click(sender As Object, e As EventArgs) Handles btnModify1.Click
         Dim result = GetDurationsAndTotal()
         Dim durations = result.Item1
@@ -207,4 +221,11 @@
             MessageBox.Show("Successfully Saved.")
         End If
     End Sub
+<<<<<<< HEAD
+=======
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
 End Class

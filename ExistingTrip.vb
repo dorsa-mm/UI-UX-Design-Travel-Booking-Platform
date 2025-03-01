@@ -25,4 +25,11 @@
         MI.Show()
         Me.Close()
     End Sub
+<<<<<<< HEAD
+=======
+
+    Private Sub ExistingTrip_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
 End Class

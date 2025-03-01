@@ -17,9 +17,12 @@ Partial Class SelectTour
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
+<<<<<<< HEAD
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
+=======
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Label1 = New Label()
@@ -27,6 +30,7 @@ Partial Class SelectTour
         ' 
         ' Label1
         ' 
+<<<<<<< HEAD
         Label1.AutoSize = True
         Label1.Font = New Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.Location = New Point(272, 17)
@@ -39,15 +43,36 @@ Partial Class SelectTour
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+=======
+        Label1.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.DarkBlue
+        Label1.Location = New Point(0, 20)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(713, 40)
+        Label1.TabIndex = 0
+        Label1.Text = "SELECT TOUR"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' SelectTour
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         ClientSize = New Size(713, 437)
         Controls.Add(Label1)
         Margin = New Padding(3, 2, 3, 2)
         Name = "SelectTour"
         StartPosition = FormStartPosition.CenterScreen
+<<<<<<< HEAD
         Text = "SelectTour"
         ResumeLayout(False)
         PerformLayout()
 
+=======
+        Text = "Select Tour"
+        ResumeLayout(False)
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     End Sub
 
     Friend WithEvents Label1 As Label

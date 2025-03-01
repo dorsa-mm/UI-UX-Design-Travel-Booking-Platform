@@ -18,19 +18,34 @@
     End Sub
 
     Private Sub ShowTrips(trips As List(Of Trip))
+<<<<<<< HEAD
         Dim startX As Integer = 290 ' Starting X-coordinate
         Dim startY As Integer = 95 ' Starting Y-coordinate
+=======
+        ' Calculate center dynamically:
+        Dim buttonWidth As Integer = 200
+        Dim startX As Integer = (Me.ClientSize.Width - buttonWidth) \ 2
+        Dim startY As Integer = 95 ' You can adjust the vertical starting point as needed
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
         Dim buttonHeight As Integer = 30 ' Height of each button
         Dim verticalSpacing As Integer = 10 ' Space between buttons
 
         For i As Integer = 0 To trips.Count - 1
             Dim trip As Trip = trips(i)
 
+<<<<<<< HEAD
             ' Create a new button
             Dim tripButton As New Button()
             tripButton.Text = trip.TripName ' Replace "Name" with the actual property for the trip name
             tripButton.Size = New Size(200, buttonHeight) ' Set size
             tripButton.Location = New Point(startX, startY + i * (buttonHeight + verticalSpacing)) ' Position dynamically
+=======
+            ' Create a new button for each trip
+            Dim tripButton As New Button()
+            tripButton.Text = trip.TripName
+            tripButton.Size = New Size(buttonWidth, buttonHeight)
+            tripButton.Location = New Point(startX, startY + i * (buttonHeight + verticalSpacing))
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
 
             ' Optionally, add a click event handler for each button
             AddHandler tripButton.Click, Sub(sender, e) HandleTripButtonClick(trip)
@@ -40,6 +55,10 @@
         Next
     End Sub
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
     ' Example handler for trip button clicks
     Private Sub HandleTripButtonClick(trip As Trip)
         If _isModify Then
@@ -70,4 +89,11 @@
     Private Sub SelectTour_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+<<<<<<< HEAD
+=======
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+>>>>>>> a8c1fdd (Initial commit of Time Travel Visual Basic Application)
 End Class
